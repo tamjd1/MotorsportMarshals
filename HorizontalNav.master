@@ -4,17 +4,48 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+    
+    <link rel="stylesheet" type="text/css" href="~/Styles/Styles.css" />
+
     <title></title>
+    
     <asp:ContentPlaceHolder id="head" runat="server">
+       
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    <form id="form1" runat="server">
-    <div>
-        <asp:ContentPlaceHolder id="MainContent" runat="server">
-        
-        </asp:ContentPlaceHolder>
-    </div>
+    <form runat="server">
+        <header id="header">
+            <div id="banner"></div>
+            <nav id="navbar"> 
+                <ul> 
+                    <li>
+                        <asp:LinkButton CssClass="hNav" ID="lnkHome" runat="server" PostBackUrl="~/Home.aspx">Home</asp:LinkButton>
+                    </li>
+                    <li>
+                        <asp:LinkButton CssClass="hNav" ID="lnkRegistration" runat="server" PostBackUrl="~/Registration.aspx">Registration</asp:LinkButton>
+                    </li>
+                    <li>
+                        <asp:LinkButton CssClass="hNav" ID="lnkForum" runat="server" PostBackUrl="~/Forum.aspx">Forum</asp:LinkButton>
+                    </li>
+                    <li>
+                        <asp:LinkButton CssClass="hNav" ID="lnkNewMarshals" runat="server" PostBackUrl="~/NewMarshals.aspx">New Marshals</asp:LinkButton>
+                    </li>
+                    <li>
+                        <asp:LinkButton CssClass="hNav" ID="lnkApply" runat="server" PostBackUrl="~/Apply.aspx">Apply</asp:LinkButton>
+                    </li>
+                    <li>
+                        <asp:LinkButton CssClass="hNav" ID="lnkDevelopmentLog" runat="server" PostBackUrl="~/DevelopmentLog.aspx">Development Log</asp:LinkButton>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div id="body">    
+            <asp:ContentPlaceHolder id="MainContent" runat="server"></asp:ContentPlaceHolder>
+        </div>
+        <footer id="footer">
+
+        </footer>
     </form>
 </body>
 </html>
