@@ -1,16 +1,7 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Apply.aspx.cs" Inherits="Apply" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="HorizontalNav.master" CodeFile="Apply.aspx.cs" Inherits="Apply" %>
 
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-    <div>
-    
-    </div>
-    </form>
-</body>
-</html>
+<asp:Content ContentPlaceHolderId="MainContent" runat="server">
+  <h2>Individual Content</h2>
+  <p>Paragraph 1</p>
+  <p>Paragraph 2</p>
+</asp:Content>
