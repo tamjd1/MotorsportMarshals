@@ -123,6 +123,9 @@
     </div>
     <footer>
         <div class="content-wrapper">
+
+
+
             <div class="float-right">
                 <p>&copy; <%: DateTime.Now.Year %> - Taha Amjad & Cory Hall</p>
             </div>
