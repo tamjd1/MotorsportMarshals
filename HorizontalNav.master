@@ -5,7 +5,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     
-    <link rel="stylesheet" type="text/css" href="~/Styles/Styles.css" />
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <script src="Scripts/sorttable.js"></script>
+    <script src="Scripts/jquery.scrollTo.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="~/Styles/HorizontalNav.css" />
 
     <title></title>
     
@@ -16,26 +21,28 @@
 <body>
     <form runat="server">
         <header id="header">
-            <div id="banner"></div>
+            <div id="banner">
+
+            </div>
             <nav id="navbar"> 
                 <ul> 
                     <li>
-                        <asp:LinkButton CssClass="hNav" ID="lnkHome" runat="server" PostBackUrl="~/Home.aspx">Home</asp:LinkButton>
+                        <asp:LinkButton ID="lnkHome" runat="server" PostBackUrl="~/Home.aspx">Home</asp:LinkButton>
                     </li>
                     <li>
-                        <asp:LinkButton CssClass="hNav" ID="lnkRegistration" runat="server" PostBackUrl="~/Registration.aspx">Registration</asp:LinkButton>
+                        <asp:LinkButton ID="lnkRegistration" runat="server" PostBackUrl="~/Registration.aspx">Registration</asp:LinkButton>
                     </li>
                     <li>
-                        <asp:LinkButton CssClass="hNav" ID="lnkForum" runat="server" PostBackUrl="~/Forum.aspx">Forum</asp:LinkButton>
+                        <asp:LinkButton ID="lnkForum" runat="server" PostBackUrl="~/Forum.aspx">Forum</asp:LinkButton>
                     </li>
                     <li>
-                        <asp:LinkButton CssClass="hNav" ID="lnkNewMarshals" runat="server" PostBackUrl="~/NewMarshals.aspx">New Marshals</asp:LinkButton>
+                        <asp:LinkButton ID="lnkNewMarshals" runat="server" PostBackUrl="~/NewMarshals.aspx">New Marshals</asp:LinkButton>
                     </li>
                     <li>
-                        <asp:LinkButton CssClass="hNav" ID="lnkApply" runat="server" PostBackUrl="~/Apply.aspx">Apply</asp:LinkButton>
+                        <asp:LinkButton ID="lnkApply" runat="server" PostBackUrl="~/Apply.aspx">Apply</asp:LinkButton>
                     </li>
                     <li>
-                        <asp:LinkButton CssClass="hNav" ID="lnkDevelopmentLog" runat="server" PostBackUrl="~/DevelopmentLog.aspx">Development Log</asp:LinkButton>
+                        <asp:LinkButton ID="lnkDevelopmentLog" runat="server" PostBackUrl="~/DevelopmentLog.aspx">Development Log</asp:LinkButton>
                     </li>
                 </ul>
             </nav>

@@ -1,0 +1,105 @@
+﻿header {
+	margin-bottom: 50px;
+}
+
+#logo {
+	text-indent: -999999px;
+	background: url('../Images/logo.png') no-repeat left top;
+	background-size: auto 100%;
+	width: 70px;
+	height: 35px;
+	margin: 7.5px 20px 0 15px;
+	float: left;
+}
+
+#banner {
+    background: url('../Images/banner.jpg') no-repeat center;
+    width: 1000px;
+    height: 372px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+nav {
+	color: black;
+	background: black;
+	height: 50px;
+	-webkit-box-shadow: 0 10px 10px -10px black;
+    -moz-box-shadow: 0 10px 10px -10px black;
+    box-shadow: 0 10px 10px -10px black;
+    border-bottom-left-radius: 10px 5px;
+    border-top-right-radius: 10% 5%;
+    border-bottom-right-radius: 10px;
+}
+
+nav ul li a,
+nav ul li input[type=submit] {
+    font-size: 1.5em;
+    text-transform: uppercase;
+    text-indent: 30px;
+    line-height: 50px;
+    color: #fff;
+    background: transparent /*url('../Images/iconsNav.png')*/ no-repeat left top;
+    background-size: 36px 200px;
+    margin: 0 20px;
+    border: 0;
+    float: left;
+    display: block;
+}
+
+nav ul li { 
+    display: inline; 
+    padding-right: 1em;
+    padding-left: 1em;
+    /*border-right: 1px solid #000000;*/
+    /*border-left: 1px solid #000000;*/
+    /*padding-top:30%;*/
+    /*background-color:red;*/
+}
+
+nav ul li a {
+    text-decoration: none;
+    /*color: #000000;*/
+    font-family: Arial, sans-serif;
+    font-size: medium;
+    /*font-weight: bold;*/
+    letter-spacing: 1px;
+}
+
+
+nav ul li input[type=submit] {
+    height: 50px;
+}
+
+nav ul li a:hover,
+nav ul li a:focus,
+nav ul li input[type=submit]:hover,
+nav ul li input[type=submit]:active,
+nav ul li input[type=submit]:focus {
+    color: yellow;
+}
+
+    nav ul li a:active {
+        color:green;
+    }
+
+nav ul li:last-child {
+    float: right;
+}
+
+nav ul li:nth-child(1) a {
+    background-position: 0 0;
+}
+
+nav ul li:nth-child(2) a {
+    text-indent: 45px;
+    background-position: 0 -50px;
+}
+
+nav ul li:nth-child(3) a { 
+    background-position: 0 -100px;
+}
+
+nav ul li:nth-child(4) input[type=submit] {
+    background-position: 0 -150px;
+}
