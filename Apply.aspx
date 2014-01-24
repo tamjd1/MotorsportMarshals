@@ -1,7 +1,7 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="HorizontalNav.master" CodeFile="Apply.aspx.cs" Inherits="Apply" %>
-
-<asp:Content ContentPlaceHolderId="MainContent" runat="server">
-  <h2>Individual Content</h2>
-  <p>Paragraph 1</p>
-  <p>Paragraph 2</p>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/HorizontalNav.Master" AutoEventWireup="true" CodeBehind="Apply.aspx.cs" Inherits="WebApplication1.WebForm4" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="FeaturedContent" runat="server">
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
 </asp:Content>

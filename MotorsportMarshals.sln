@@ -1,33 +1,18 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Express 2012 for Web
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "MotorsportMarshals", ".", "{CEEFF5E1-EAF4-4623-878C-CD8455F42601}"
-	ProjectSection(WebsiteProperties) = preProject
-		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
-		Debug.AspNetCompiler.VirtualPath = "/MotorsportMarshals"
-		Debug.AspNetCompiler.PhysicalPath = "..\..\..\GitHub\MotorsportMarshals\"
-		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\MotorsportMarshals\"
-		Debug.AspNetCompiler.Updateable = "true"
-		Debug.AspNetCompiler.ForceOverwrite = "true"
-		Debug.AspNetCompiler.FixedNames = "false"
-		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.VirtualPath = "/MotorsportMarshals"
-		Release.AspNetCompiler.PhysicalPath = "..\..\..\GitHub\MotorsportMarshals\"
-		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\MotorsportMarshals\"
-		Release.AspNetCompiler.Updateable = "true"
-		Release.AspNetCompiler.ForceOverwrite = "true"
-		Release.AspNetCompiler.FixedNames = "false"
-		Release.AspNetCompiler.Debug = "False"
-		VWDPort = "63439"
-	EndProjectSection
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MotorsportMarshals", "MotorsportMarshals.csproj", "{2FC9F410-929D-4A5F-9BCE-4CB15F0C5F8A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{CEEFF5E1-EAF4-4623-878C-CD8455F42601}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CEEFF5E1-EAF4-4623-878C-CD8455F42601}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FC9F410-929D-4A5F-9BCE-4CB15F0C5F8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FC9F410-929D-4A5F-9BCE-4CB15F0C5F8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FC9F410-929D-4A5F-9BCE-4CB15F0C5F8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FC9F410-929D-4A5F-9BCE-4CB15F0C5F8A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

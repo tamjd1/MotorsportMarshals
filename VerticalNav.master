@@ -1,17 +1,17 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="VerticalNav.master.cs" Inherits="VerticalNav" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="VerticalNav.master.cs" Inherits="WebApplication1.VerticalNav" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-    <asp:ContentPlaceHolder id="head" runat="server">
+    <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
     <form id="form1" runat="server">
     <div>
-        <asp:ContentPlaceHolder id="MainContent" runat="server">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         
         </asp:ContentPlaceHolder>
     </div>
