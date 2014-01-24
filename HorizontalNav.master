@@ -3,56 +3,69 @@
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
+    <head runat="server">
     
-    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
-    <script src="Scripts/sorttable.js"></script>
-    <script src="Scripts/jquery.scrollTo.js"></script>
+        <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+        <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+        <script src="Scripts/sorttable.js"></script>
+        <script src="Scripts/jquery.scrollTo.js"></script>
 
-    <link rel="stylesheet" type="text/css" href="~/Styles/HorizontalNav.css" />
+        <link rel="stylesheet" type="text/css" href="~/Styles/HorizontalNav.css" />
 
-    <title></title>
+        <title></title>
     
-    <asp:ContentPlaceHolder id="head" runat="server">
+        <asp:ContentPlaceHolder id="head" runat="server">
        
-    </asp:ContentPlaceHolder>
-</head>
-<body>
-    <form runat="server">
-        <header id="header">
-            <div id="banner">
-
+        </asp:ContentPlaceHolder>
+    </head>
+    <body>
+        <form runat="server">
+            <header id="header">
+                <%--<div id="logo">
+                    <img src="./Images/Logo_Glyph.jpg" alt="logo" />
+                    <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/Logo_Glyph.jpg" />
+                    <asp:ImageButton ID="ImageButton2" runat="server" ImageUrl="~/Images/Logo_Glyph.jpg" />
+                </div>--%>
+                <%--<div id="banner">
+                    <img src="./Images/banner.jpg" alt="banner" />
+                    <asp:Image ID="ImageButton1" runat="server" ImageUrl="~/Images/banner.jpg" />
+                    <asp:ImageButton runat="server" ImageUrl="~/Images/banner.jpg" />
+                </div>--%>
+                <nav id="navbar"> 
+                    <ul> 
+                        <li>
+                            <asp:LinkButton ID="lnkHome" runat="server" PostBackUrl="~/Home.aspx">Home</asp:LinkButton>
+                        </li>
+                        <li>
+                            <asp:LinkButton ID="lnkRegistration" runat="server" PostBackUrl="~/Registration.aspx">Registration</asp:LinkButton>
+                        </li>
+                        <li>
+                            <asp:LinkButton ID="lnkForum" runat="server" PostBackUrl="~/Forum.aspx">Forum</asp:LinkButton>
+                        </li>
+                        <li>
+                            <asp:LinkButton ID="lnkNewMarshals" runat="server" PostBackUrl="~/NewMarshals.aspx">New Marshals</asp:LinkButton>
+                        </li>
+                        <li>
+                            <asp:LinkButton ID="lnkApply" runat="server" PostBackUrl="~/Apply.aspx">Apply</asp:LinkButton>
+                        </li>
+                        <li>
+                            <asp:LinkButton ID="lnkFacebook" runat="server" PostBackUrl="https://www.facebook.com/motorsportmarshals">Facebook</asp:LinkButton>
+                        </li>
+                        <li>
+                            <asp:LinkButton ID="lnkTwitter" runat="server" PostBackUrl="https://twitter.com/MMS_Marshals">Twitter</asp:LinkButton>
+                        </li>
+                        <li>
+                            <asp:LinkButton ID="lnkDevelopmentLog" runat="server" PostBackUrl="~/DevelopmentLog.aspx">Development Log</asp:LinkButton>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            <div id="body">    
+                <asp:ContentPlaceHolder id="MainContent" runat="server"></asp:ContentPlaceHolder>
             </div>
-            <nav id="navbar"> 
-                <ul> 
-                    <li>
-                        <asp:LinkButton ID="lnkHome" runat="server" PostBackUrl="~/Home.aspx">Home</asp:LinkButton>
-                    </li>
-                    <li>
-                        <asp:LinkButton ID="lnkRegistration" runat="server" PostBackUrl="~/Registration.aspx">Registration</asp:LinkButton>
-                    </li>
-                    <li>
-                        <asp:LinkButton ID="lnkForum" runat="server" PostBackUrl="~/Forum.aspx">Forum</asp:LinkButton>
-                    </li>
-                    <li>
-                        <asp:LinkButton ID="lnkNewMarshals" runat="server" PostBackUrl="~/NewMarshals.aspx">New Marshals</asp:LinkButton>
-                    </li>
-                    <li>
-                        <asp:LinkButton ID="lnkApply" runat="server" PostBackUrl="~/Apply.aspx">Apply</asp:LinkButton>
-                    </li>
-                    <li>
-                        <asp:LinkButton ID="lnkDevelopmentLog" runat="server" PostBackUrl="~/DevelopmentLog.aspx">Development Log</asp:LinkButton>
-                    </li>
-                </ul>
-            </nav>
-        </header>
-        <div id="body">    
-            <asp:ContentPlaceHolder id="MainContent" runat="server"></asp:ContentPlaceHolder>
-        </div>
-        <footer id="footer">
+            <footer id="footer">
 
-        </footer>
-    </form>
-</body>
+            </footer>
+        </form>
+    </body>
 </html>
