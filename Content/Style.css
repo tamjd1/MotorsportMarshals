@@ -1,0 +1,128 @@
+﻿header {
+	margin-bottom: 50px;
+    background-color:black;
+    	-webkit-box-shadow: 0 10px 10px -10px black;
+    -moz-box-shadow: 0 10px 10px -10px black;
+    box-shadow: 0 10px 10px -10px black;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+/*#logo {
+	text-indent: -999999px;
+	background: url('../Images/logo.png') no-repeat left top;
+	background-size: auto 100%;
+	width: 70px;
+	height: 35px;
+	margin: 7.5px 20px 0 15px;
+	float: left;
+}*/
+
+#MainContent_banner {
+    margin-left:auto;
+    margin-right:auto;
+}
+
+#logoDiv {
+    width: 500px;
+    height: 200px;
+    margin-left:auto;
+    margin-right:auto;
+
+}
+
+#logo, #text {
+    padding-top:7%;
+    display:inline;
+    margin-left:auto;
+    margin-right:auto;
+    width: 144px;
+    height: 144px;
+}
+
+#text {
+    width:280px;
+}
+
+nav {
+	color: black;
+	background: black;
+	height: 50px;
+	-webkit-box-shadow: 0 10px 10px -10px black;
+    -moz-box-shadow: 0 10px 10px -10px black;
+    box-shadow: 0 10px 10px -10px black;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+nav ul li a {
+    font-size: 1.5em;
+    text-transform: uppercase;
+    line-height: 50px;
+    color: #fff;
+    margin: 0 20px;
+    border: 0;
+    float:left;
+    display: block;
+}
+
+nav ul li { 
+    display: inline; 
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: medium;
+    letter-spacing: 1px;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+    color: yellow;
+}
+
+nav ul li a:active {
+    color:green;
+    font-weight:bolder;
+}
+
+nav ul li:last-child {
+    float: right;
+    padding-right: 2em;
+    padding-left: 2em;
+    border-left: 1px white;
+    border-left-style: dashed;
+}
+
+footer {
+    background-image: url('../Images/chkflag.jpg') ;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    clear: both;
+    background-color: #e2e2e2;
+    font-size: .8em;
+    height: 50px;
+}
+
+    footer p {
+        background-color:black;
+        color:white;
+    }
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.float-center {
+        margin-left:auto;
+        margin-right:auto;
+}
+
+body {
+    background-color:whitesmoke;
+}

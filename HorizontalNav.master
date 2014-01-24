@@ -4,7 +4,7 @@
 <html lang="en">
 <head runat="server">
     <meta charset="utf-8" />
-    <link rel="stylesheet" type="text/css" href="~/Content/HorizontalNav.css" />
+    <link rel="stylesheet" type="text/css" href="~/Content/Style.css" />
     <title><%: Page.Title %> - My ASP.NET Application</title>
     <asp:PlaceHolder runat="server">     
           <%: Scripts.Render("~/bundles/modernizr") %>
@@ -19,7 +19,6 @@
     <asp:ScriptManager runat="server">
         <Scripts>
             <%--Framework Scripts--%>
-            
             <asp:ScriptReference Name="MsAjaxBundle" />
             <asp:ScriptReference Name="jquery" />
             <asp:ScriptReference Name="jquery.ui.combined" />
@@ -35,9 +34,13 @@
             <asp:ScriptReference Path="http://code.jquery.com/jquery-1.9.1.js" />
             <asp:ScriptReference Path="http://code.jquery.com/ui/1.10.3/jquery-ui.js" />
             <%--Site Scripts--%>
-
         </Scripts>
     </asp:ScriptManager>
+        <script>
+            $(document).ready(function () {
+                $("#body").height($(window).height() - $("footer").height() - $("header").height() - 50);
+            });
+        </script>
     <header>
 <%--        <div class="content-wrapper">
             <div class="float-left">
