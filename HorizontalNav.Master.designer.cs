@@ -46,7 +46,7 @@ namespace WebApplication1 {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lnkHome;
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor lnkHome;
         
         /// <summary>
         /// lnkRegistration control.
@@ -55,7 +55,7 @@ namespace WebApplication1 {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lnkRegistration;
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor lnkRegistration;
         
         /// <summary>
         /// lnkForum control.
@@ -64,7 +64,7 @@ namespace WebApplication1 {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lnkForum;
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor lnkForum;
         
         /// <summary>
         /// lnkNewMarshals control.
@@ -73,16 +73,7 @@ namespace WebApplication1 {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lnkNewMarshals;
-        
-        /// <summary>
-        /// lnkApply control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lnkApply;
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor lnkNewMarshals;
         
         /// <summary>
         /// lnkFacebook control.
@@ -91,7 +82,7 @@ namespace WebApplication1 {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lnkFacebook;
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor lnkFacebook;
         
         /// <summary>
         /// lnkTwitter control.
@@ -100,7 +91,7 @@ namespace WebApplication1 {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lnkTwitter;
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor lnkTwitter;
         
         /// <summary>
         /// lnkDevelopmentLog control.
@@ -109,7 +100,7 @@ namespace WebApplication1 {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lnkDevelopmentLog;
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor lnkDevelopmentLog;
         
         /// <summary>
         /// FeaturedContent control.

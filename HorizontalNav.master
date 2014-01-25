@@ -88,30 +88,13 @@
                 </div>--%>
                 <nav id="navbar"> 
                     <ul> 
-                        <li>
-                            <asp:LinkButton ID="lnkHome" runat="server" PostBackUrl="~/Home.aspx">Home</asp:LinkButton>
-                        </li>
-                        <li>
-                            <asp:LinkButton ID="lnkRegistration" runat="server" PostBackUrl="~/Registration.aspx">Registration</asp:LinkButton>
-                        </li>
-                        <li>
-                            <asp:LinkButton ID="lnkForum" runat="server" PostBackUrl="~/Forum.aspx">Forum</asp:LinkButton>
-                        </li>
-                        <li>
-                            <asp:LinkButton ID="lnkNewMarshals" runat="server" PostBackUrl="~/NewMarshals.aspx">New Marshals</asp:LinkButton>
-                        </li>
-                        <li>
-                            <asp:LinkButton ID="lnkApply" runat="server" PostBackUrl="~/Apply.aspx">Apply</asp:LinkButton>
-                        </li>
-                        <li>
-                            <asp:LinkButton ID="lnkFacebook" runat="server" PostBackUrl="https://www.facebook.com/motorsportmarshals">Facebook</asp:LinkButton>
-                        </li>
-                        <li>
-                            <asp:LinkButton ID="lnkTwitter" runat="server" PostBackUrl="https://twitter.com/MMS_Marshals">Twitter</asp:LinkButton>
-                        </li>
-                        <li>
-                            <asp:LinkButton ID="lnkDevelopmentLog" runat="server" PostBackUrl="~/DevelopmentLog.aspx">Development Log</asp:LinkButton>
-                        </li>
+                        <li><a id="lnkHome" runat="server" href="~/Home.aspx">Home</a></li>
+                        <li><a id="lnkRegistration" runat="server" href="~/Registration.aspx">Registration</a></li>
+                        <li><a id="lnkForum" runat="server" href="~/Forum.aspx">Forum</a></li>
+                        <li><a id="lnkNewMarshals" runat="server" href="~/NewMarshals.aspx">New Marshals</a></li>
+                        <li><a id="lnkFacebook" runat="server" href="https://www.facebook.com/motorsportmarshals">Facebook</a></li>
+                        <li><a id="lnkTwitter" runat="server" href="https://twitter.com/MMS_Marshals">Twitter</a></li>
+                        <li><a id="lnkDevelopmentLog" runat="server" href="~/DevelopmentLog.aspx">Development Log</a></li>
                     </ul>
                 </nav>
     </header>
