@@ -15,11 +15,19 @@
 }
 
 #logoDiv {
-    width: 350px;
-    height: 130px;
-    margin-left:auto;
-    margin-right:auto;
+    width:40%;
+    /*width: 350px;
+    height: 130px;*/
+    /*margin-left:auto;
+    margin-right:auto;*/
+    padding-left: 2em;
 
+}
+
+#nextRace {
+    width:40%;
+    color: white;
+    padding-right:2em;
 }
 
 #logo, #text {

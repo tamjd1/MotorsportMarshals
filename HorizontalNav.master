@@ -4,7 +4,7 @@
 <html lang="en">
 <head runat="server">
     <meta charset="utf-8" />
-    <link rel="stylesheet" type="text/css" href="~/Content/Style.css" />
+    <link rel="stylesheet" type="text/css" href="~/Content/HNav.css" />
     <title><%: Page.Title %> - My ASP.NET Application</title>
     <asp:PlaceHolder runat="server">     
           <%: Scripts.Render("~/bundles/modernizr") %>
@@ -80,8 +80,8 @@
                     <asp:ImageButton ID="logo" runat="server" ImageUrl="~/Images/car_black.png" PostBackUrl="~/Home.aspx"/>
                     <asp:ImageButton ID="text" runat="server" ImageUrl="~/Images/text_black.png" PostBackUrl="~/Home.aspx" />
                 </div>
-                <div class="float-right">
-
+                <div id="nextRace" class="float-right">
+                    <asp:Label ID="lblNextRace" runat="server"></asp:Label>
                 </div>
                 <nav id="navbar"> 
                     <ul> 
@@ -104,9 +104,6 @@
         <section class="content-wrapper main-content clear-fix">
             <asp:ContentPlaceHolder runat="server" ID="MainContent" />
         </section>
-        <div id="dates">
-
-        </div>
     </div>
 
     <footer>
