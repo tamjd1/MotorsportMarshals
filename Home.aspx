@@ -24,6 +24,11 @@
                     .fadeIn("slow");
                 });
             }
+
+            $("#banner").width(imgsarray[0].clienWidth);
+            $("#banner").height(imgsarray[0].clienHeight);
+            $("#banner").addClass("float-right");
+
         });
     </script>
 

@@ -38,9 +38,10 @@
     </asp:ScriptManager>
         <script>
             $(document).ready(function () {
-                $("#body").height($(window).height() - $("footer").height() - $("header").height() - 50);
+                $("#body").height($(window).height() - $("footer").height() - $("header").height() - $("#top").height() - $("#bottom").height() - 50);
             });
         </script>
+                <div id="top" class="checkeredFlags"></div>
     <header>
 <%--        <div class="content-wrapper">
             <div class="float-left">
@@ -76,44 +77,75 @@
             </div>
         </div>--%>
                 <div id="logoDiv">
-                <%--<img src="./Images/Logo_Glyph.jpg" alt="logo" />
-                    <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/Logo_Glyph.jpg" />--%>
-                    <asp:ImageButton ID="logo" runat="server" ImageUrl="~/Images/car_black.png" />
-                    <asp:ImageButton ID="text" runat="server" ImageUrl="~/Images/text_black.png" />
+                    <asp:ImageButton ID="logo" runat="server" ImageUrl="~/Images/car_black.png" PostBackUrl="~/Home.aspx"/>
+                    <asp:ImageButton ID="text" runat="server" ImageUrl="~/Images/text_black.png" PostBackUrl="~/Home.aspx" />
                 </div>
-                <%--<div id="banner">
-                    <img src="./Images/banner.jpg" alt="banner" />
-                    <asp:Image ID="ImageButton1" runat="server" ImageUrl="~/Images/banner1.jpg" />
-                    <asp:ImageButton runat="server" ImageUrl="~/Images/banner.jpg" />
-                </div>--%>
+                <div class="float-right">
+
+                </div>
                 <nav id="navbar"> 
                     <ul> 
                         <li><a id="lnkHome" runat="server" href="~/Home.aspx">Home</a></li>
                         <li><a id="lnkRegistration" runat="server" href="~/Registration.aspx">Registration</a></li>
                         <li><a id="lnkForum" runat="server" href="~/Forum.aspx">Forum</a></li>
                         <li><a id="lnkNewMarshals" runat="server" href="~/NewMarshals.aspx">New Marshals</a></li>
-                        <li><a id="lnkFacebook" runat="server" href="https://www.facebook.com/motorsportmarshals">Facebook</a></li>
-                        <li><a id="lnkTwitter" runat="server" href="https://twitter.com/MMS_Marshals">Twitter</a></li>
+                        <%--<li><a id="lnkFacebook" runat="server" href="https://www.facebook.com/motorsportmarshals">Facebook</a></li>
+                        <li><a id="lnkTwitter" runat="server" href="https://twitter.com/MMS_Marshals">Twitter</a></li>--%>
                         <li><a id="lnkDevelopmentLog" runat="server" href="~/DevelopmentLog.aspx">Development Log</a></li>
                     </ul>
                 </nav>
     </header>
+
     <div id="body">
+        <div id="daysUntil">
+
+        </div>
         <asp:ContentPlaceHolder runat="server" ID="FeaturedContent" />
         <section class="content-wrapper main-content clear-fix">
             <asp:ContentPlaceHolder runat="server" ID="MainContent" />
         </section>
-    </div>
-    <footer>
-        <div class="content-wrapper">
+        <div id="dates">
 
-
-
-            <div class="float-right">
-                <p>&copy; <%: DateTime.Now.Year %> - Taha Amjad & Cory Hall</p>
-            </div>
         </div>
+    </div>
+
+    <footer>
+        <div id="icons" style="width:33%">
+            <a href="https://www.facebook.com/motorsportmarshals">
+                <p>
+                    Like us on Facebook!
+                </p>
+            </a>
+            <a href="https://twitter.com/MMS_Marshals">
+                <p>
+                    Follow us on Twitter!
+                </p>
+            </a>
+        </div>
+        
+        <div id="address" style="width:30%" class="float-center">
+            <a href="https://maps.google.ca/maps?q=1100+Barmac+Drive,+Toronto+Ontario+M9L+2X3&ie=UTF-8&ei=XOHeUf_sJtKFyQGQtoFQ&ved=0CAoQ_AUoAg">
+                <p>
+                    1100 Barmac Drive <br /> 
+                    Toronto ON <br />
+                    M9L 2X3
+                </p>
+            </a>
+        </div>
+
+        <div id="copyright" style="width:33%" class="float-right">
+            <p>
+                Today is: <%: DateTime.Now.DayOfWeek %> <br />
+                <%: DateTime.Now.Month.ToString() %>/<%: DateTime.Now.Day %>/<%: DateTime.Now.Year %> <br />
+                &copy; <%: DateTime.Now.Year %> - Taha Amjad & Cory Hall
+            </p>
+        </div>
+<%--        <div class="content-wrapper"> 
+            
+        </div>--%>
+        
     </footer>
+        <div id="bottom" class="checkeredFlags"></div>
     </form>
 </body>
 </html>
