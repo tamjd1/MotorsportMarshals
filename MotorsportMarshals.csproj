@@ -131,6 +131,7 @@
     <Content Include="Account\OpenAuthProviders.ascx" />
     <Content Include="Account\Register.aspx" />
     <Content Include="Account\RegisterExternalLogin.aspx" />
+    <Content Include="App_Themes\CheckeredFlag\CheckeredFlag.css" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\HNav.css" />
     <Content Include="Content\Site.css" />
