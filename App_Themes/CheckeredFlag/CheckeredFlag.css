@@ -166,23 +166,3 @@ p {
 footer a {
     text-decoration:none;
 }
-
-#homecontent {
-    
-}
-    #homecontent p {
-        margin-left:10px;
-        margin-right:10px;
-        margin-bottom:10px;
-    }
-
-    #homecontent h1 {
-        margin-left:10px;
-    }
-
-    /*
-    #homecontent ul {      
-        list-style-image: url('./images/flaglisticon.png');
-    }
-    */
-   

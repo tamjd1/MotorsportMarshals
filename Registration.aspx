@@ -4,4 +4,5 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="FeaturedContent" runat="server">
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
+    <a href="Apply.aspx">Apply</a>
 </asp:Content>
