@@ -45,21 +45,21 @@
 nav {
 	color: black;
 	background: red;
-    /*background: linear-gradient(0deg, red, black 80%, red);*/
-	/*height: 50px;*/
+    background: linear-gradient(0deg, red, black 80%, red);
+	height: 50px;
 	-webkit-box-shadow: 0 10px 10px -10px black;
     -moz-box-shadow: 0 10px 10px -10px black;
     box-shadow: 0 10px 10px -10px black;
-    /*border-bottom-left-radius: 10px;*/
-    /*border-bottom-right-radius: 10px;*/
-    /*border-top:1px solid red;*/
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top:1px solid red;
 }
 
 nav ul li a{
-    font-size: 1.5em;
-    text-transform: uppercase;
-    line-height: 50px;
-    color: #fff;
+    /*font-size: 1.5em;*/
+    /*text-transform: uppercase;*/
+    /*line-height: 50px;*/
+    /*color: #fff;*/
     /*margin: 0 20px;*/
     /*border: 0;*/
     /*float:left;*/
@@ -111,8 +111,8 @@ footer {
     }
 
 .checkeredFlags {
-    background-image: url('../Images/chkflag.jpg') ;
-    /*height: 30px;*/
+    background-image: url('../Images/chkflag.jpg');
+    height: 30px;
 }
 
 

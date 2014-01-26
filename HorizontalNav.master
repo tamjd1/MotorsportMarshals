@@ -4,7 +4,7 @@
 <html lang="en">
 <head runat="server">
     <meta charset="utf-8" />
-    <%--<link rel="stylesheet" type="text/css" href="~/Content/HNav.css" />--%>
+    <link rel="stylesheet" type="text/css" href="~/Content/HNav.css" />
     <title><%: Page.Title %> - My ASP.NET Application</title>
     <asp:PlaceHolder runat="server">     
           <%: Scripts.Render("~/bundles/modernizr") %>
