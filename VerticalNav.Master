@@ -40,7 +40,7 @@
     </asp:ScriptManager>
         <script>
             $(document).ready(function () {
-                $("#body").height($(window).height() - $("footer").height() - $("header").height() - $("#top").height() - $("#bottom").height() - 50);
+                $("#body").css("min-height", ($(window).height() - $("footer").height() - $("header").height() - $("#top").height() - $("#bottom").height() - 50);
             });
         </script>
                 <div id="top" class="checkeredFlags"></div>
