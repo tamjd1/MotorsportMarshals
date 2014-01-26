@@ -4,7 +4,11 @@
 <html lang="en">
 <head runat="server">
     <meta charset="utf-8" />
+
+    <link rel="stylesheet" type="text/css" href="~/Content/style.css" />
+
     <link rel="stylesheet" type="text/css" href="~/Content/HNav.css" />
+
     <title><%: Page.Title %> - My ASP.NET Application</title>
     <asp:PlaceHolder runat="server">     
           <%: Scripts.Render("~/bundles/modernizr") %>
@@ -87,7 +91,7 @@
                     <ul> 
                         <li><a id="lnkHome" runat="server" href="~/Home.aspx">Home</a></li>
                         <li><a id="lnkRegistration" runat="server" href="~/Registration.aspx">Registration</a></li>
-                        <li><a id="lnkForum" runat="server" href="~/Forum.aspx">Forum</a></li>
+                        <li><a id="lnkForum" runat="server" href="http://motorsportmarshalling.on.ca/index.php/mmsforum">Forum</a></li>
                         <li><a id="lnkNewMarshals" runat="server" href="~/NewMarshals.aspx">New Marshals</a></li>
                         <%--<li><a id="lnkFacebook" runat="server" href="https://www.facebook.com/motorsportmarshals">Facebook</a></li>
                         <li><a id="lnkTwitter" runat="server" href="https://twitter.com/MMS_Marshals">Twitter</a></li>--%>

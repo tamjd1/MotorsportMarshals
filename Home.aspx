@@ -36,7 +36,7 @@
          <asp:Image ID="SlideShow" runat="server" />
     </div>
 
-    <div id="homecontent">
+    <div class="content">
         <h1>Welcome to MMS</h1>
 
         <p>Motorsport Marshalling Services, a member club of Canadian Automobile Sport Clubs - Ontario Region (CASC), has been training 
