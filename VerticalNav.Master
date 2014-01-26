@@ -1,16 +1,14 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="HorizontalNav.Master.cs" Inherits="WebApplication1.SiteMaster" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="VerticalNav.master.cs" Inherits="WebApplication1.VerticalNav" %>
 
 <!DOCTYPE html>
+
 <html lang="en">
+<%--<html xmlns="http://www.w3.org/1999/xhtml">--%>
 <head runat="server">
-    <meta charset="utf-8" />
-
-    <link rel="stylesheet" type="text/css" href="~/Content/style.css" />
-
-    <link rel="stylesheet" type="text/css" href="~/Content/HNav.css" />
-
+        <meta charset="utf-8" />
+        <link rel="stylesheet" type="text/css" href="~/Content/VNav.css" />
     <title><%: Page.Title %> - My ASP.NET Application</title>
-    <asp:PlaceHolder runat="server">     
+    <asp:PlaceHolder ID="PlaceHolder1" runat="server">     
           <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>  
     <%--<webopt:BundleReference runat="server" Path="~/Content/css" />--%> 
@@ -19,8 +17,8 @@
     <asp:ContentPlaceHolder runat="server" ID="HeadContent" />
 </head>
 <body>
-    <form runat="server">
-    <asp:ScriptManager runat="server">
+    <form id="Form1" runat="server">
+    <asp:ScriptManager ID="ScriptManager1" runat="server">
         <Scripts>
             <%--Framework Scripts--%>
             <asp:ScriptReference Name="MsAjaxBundle" />
@@ -47,39 +45,6 @@
         </script>
                 <div id="top" class="checkeredFlags"></div>
     <header>
-<%--        <div class="content-wrapper">
-            <div class="float-left">
-                <p class="site-title">
-                    <a runat="server" href="~/">your logo here</a>
-                </p>
-            </div>
-            <div class="float-right">
-                <section id="login">
-                    <asp:LoginView runat="server" ViewStateMode="Disabled">
-                        <AnonymousTemplate>
-                            <ul>
-                                <li><a id="registerLink" runat="server" href="~/Account/Register">Register</a></li>
-                                <li><a id="loginLink" runat="server" href="~/Account/Login">Log in</a></li>
-                            </ul>
-                        </AnonymousTemplate>
-                        <LoggedInTemplate>
-                            <p>
-                                Hello, <a runat="server" class="username" href="~/Account/Manage" title="Manage your account">
-                                    <asp:LoginName runat="server" CssClass="username" /></a>!
-                                <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/" />
-                            </p>
-                        </LoggedInTemplate>
-                    </asp:LoginView>
-                </section>
-                <nav>
-                    <ul id="menu">
-                        <li><a runat="server" href="~/">Home</a></li>
-                        <li><a runat="server" href="~/About">About</a></li>
-                        <li><a runat="server" href="~/Contact">Contact</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>--%>
                 <div id="logoDiv">
                     <asp:ImageButton ID="logo" runat="server" ImageUrl="~/Images/car_black.png" PostBackUrl="~/Home.aspx"/>
                     <asp:ImageButton ID="text" runat="server" ImageUrl="~/Images/text_black.png" PostBackUrl="~/Home.aspx" />
@@ -91,7 +56,7 @@
                     <ul> 
                         <li><a id="lnkHome" runat="server" href="~/Home.aspx">Home</a></li>
                         <li><a id="lnkRegistration" runat="server" href="~/Registration.aspx">Registration</a></li>
-                        <li><a id="lnkForum" runat="server" href="http://motorsportmarshalling.on.ca/index.php/mmsforum">Forum</a></li>
+                        <li><a id="lnkForum" runat="server" href="~/Forum.aspx">Forum</a></li>
                         <li><a id="lnkNewMarshals" runat="server" href="~/NewMarshals.aspx">New Marshals</a></li>
                         <%--<li><a id="lnkFacebook" runat="server" href="https://www.facebook.com/motorsportmarshals">Facebook</a></li>
                         <li><a id="lnkTwitter" runat="server" href="https://twitter.com/MMS_Marshals">Twitter</a></li>--%>

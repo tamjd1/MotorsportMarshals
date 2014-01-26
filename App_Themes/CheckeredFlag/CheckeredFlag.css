@@ -9,39 +9,38 @@
 }
 
 
-#MainContent_SlideShow {
+/*#MainContent_SlideShow {
     margin-left:auto;
     margin-right:auto;
-}
+}*/
 
-#logoDiv {
-    width:40%;
+/*#logoDiv {
+    width:40%;*/
     /*width: 350px;
     height: 130px;*/
     /*margin-left:auto;
     margin-right:auto;*/
-    padding-left: 2em;
+    /*padding-left: 2em;
+}*/
 
-}
-
-#nextRace {
+/*#nextRace {
     width:40%;
     color: white;
     padding-right:2em;
-}
+}*/
 
-#logo, #text {
+/*#logo, #text {
     padding-top:7%;
     display:inline;
     margin-left:auto;
     margin-right:auto;
     width: 100px;
     height: 100px;
-}
+}*/
 
-#text {
+/*#text {
     width:236px;
-}
+}*/
 
 nav {
 	color: black;
@@ -53,22 +52,22 @@ nav {
     box-shadow: 0 10px 10px -10px black;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    /*border-top:1px solid red;*/
+    border-top:1px solid red;
 }
 
 nav ul li a{
-    font-size: 1.5em;
-    text-transform: uppercase;
-    line-height: 50px;
-    color: #fff;
-    margin: 0 20px;
-    border: 0;
-    float:left;
-    display: block;
+    /*font-size: 1.5em;*/
+    /*text-transform: uppercase;*/
+    /*line-height: 50px;*/
+    /*color: #fff;*/
+    /*margin: 0 20px;*/
+    /*border: 0;*/
+    /*float:left;*/
+    /*display: block;*/
 }
 
 nav ul li { 
-    display: inline; 
+    /*display: inline;*/ 
 }
 
 nav ul li a {
@@ -85,26 +84,22 @@ nav ul li a:focus {
 
 nav ul li a:active {
     color:green;
-    /*font-weight:bolder;*/
 }
 
-nav ul li:last-child {
+/*nav ul li:last-child {
     float: right;
     padding-right: 2em;
     padding-left: 2em;
-    /*border-left: 1px white;
-    border-left-style: dashed;*/
-}
+}*/
 
 footer {
     background-color:black;
-    background: linear-gradient(180deg, red, black 20%);
+    /*background: linear-gradient(180deg, red, black 20%);
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     clear: both;
-    /*background-color: #e2e2e2;*/
     font-size: .8em;
-    height: 70px;
+    height: 70px;*/
 }
 
     footer div {
@@ -112,57 +107,56 @@ footer {
     }
 
     footer p {
-        /*background-color:black;*/
         color:white;
     }
 
 .checkeredFlags {
-    background-image: url('../Images/chkflag.jpg') ;
+    background-image: url('../Images/chkflag.jpg');
     height: 30px;
 }
 
 
-.float-left {
+/*.float-left {
     float: left;
     text-align:left;
-}
+}*/
 
-.float-right {
+/*.float-right {
     float: right;
     text-align:right;
-}
+}*/
 
-.float-center {
+/*.float-center {
         margin-left:auto;
         margin-right:auto;
         text-align:center;
-}
+}*/
 
 body {
-    background-color:white;
-    width:80%;
-    margin-left:auto;
-    margin-right:auto;
+    background-color:whitesmoke;
+    width:100%;
     font-family: Arial, sans-serif;
 }
 
-p {
+/*p {
     margin-left:10px; 
-}
+}*/
 
-#body {
+/*#body {
     padding-top:50px;
-    background-color:whitesmoke;
-}
+}*/
 
-#copyright {
+/*#copyright {
     padding-right:1em;
-}
+}*/
 
-#icons {
+/*#icons {
     padding-left:1em;
-}
+}*/
 
 footer a {
     text-decoration:none;
+
 }
+
+ 

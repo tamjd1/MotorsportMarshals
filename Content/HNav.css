@@ -1,4 +1,4 @@
-﻿header {
+﻿/*header {
 	margin-bottom: 0px;
     background-color:black;
     	-webkit-box-shadow: 0 10px 10px -10px black;
@@ -6,13 +6,13 @@
     box-shadow: 0 10px 10px -10px black;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-}
+}*/
 
 
-#MainContent_SlideShow {
+/*#MainContent_SlideShow {
     margin-left:auto;
     margin-right:auto;
-}
+}*/
 
 #logoDiv {
     width:40%;
@@ -43,7 +43,7 @@
     width:236px;
 }
 
-nav {
+/*nav {
 	color: black;
 	background: red;
     background: linear-gradient(0deg, red, black 80%, red);
@@ -53,14 +53,13 @@ nav {
     box-shadow: 0 10px 10px -10px black;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    /*border-top:1px solid red;*/
-}
+}*/
 
 nav ul li a{
-    font-size: 1.5em;
-    text-transform: uppercase;
-    line-height: 50px;
-    color: #fff;
+    /*font-size: 1.5em;*/
+    /*text-transform: uppercase;*/
+    /*line-height: 50px;*/
+    /*color: #fff;*/
     margin: 0 20px;
     border: 0;
     float:left;
@@ -71,50 +70,45 @@ nav ul li {
     display: inline; 
 }
 
-nav ul li a {
+/*nav ul li a {
     text-decoration: none;
     font-family: Arial, sans-serif;
     font-size: medium;
     letter-spacing: 1px;
-}
+}*/
 
-nav ul li a:hover,
+/*nav ul li a:hover,
 nav ul li a:focus {
     color: yellow;
 }
 
 nav ul li a:active {
     color:green;
-    /*font-weight:bolder;*/
-}
+}*/
 
 nav ul li:last-child {
     float: right;
     padding-right: 2em;
     padding-left: 2em;
-    /*border-left: 1px white;
-    border-left-style: dashed;*/
 }
 
 footer {
-    background-color:black;
+    /*background-color:black;*/
     background: linear-gradient(180deg, red, black 20%);
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     clear: both;
-    /*background-color: #e2e2e2;*/
     font-size: .8em;
     height: 70px;
 }
 
-    footer div {
+    /*footer div {
         display:inline-block;
-    }
+    }*/
 
-    footer p {
-        /*background-color:black;*/
+    /*footer p {
         color:white;
-    }
+    }*/
 
 .checkeredFlags {
     background-image: url('../Images/chkflag.jpg') ;
@@ -138,21 +132,18 @@ footer {
         text-align:center;
 }
 
-body {
-    background-color:white;
-    width:80%;
-    margin-left:auto;
-    margin-right:auto;
+/*body {
+    background-color:whitesmoke;
+    width:100%;
     font-family: Arial, sans-serif;
-}
+}*/
 
-p {
+/*p {
     margin-left:10px; 
-}
+}*/
 
 #body {
     padding-top:50px;
-    background-color:whitesmoke;
 }
 
 #copyright {
@@ -163,8 +154,11 @@ p {
     padding-left:1em;
 }
 
-footer a {
+/*footer a {
     text-decoration:none;
+
 }
 
+
+}*/
    
