@@ -1,4 +1,11 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/HorizontalNav.Master" AutoEventWireup="true" CodeBehind="NewMarshals.aspx.cs" Inherits="WebApplication1.WebForm3" %>
+﻿<%--
+Title: NewMarshals.aspx
+Date Created: 24/01/2014
+Author: Cory Hall
+Description: This is an information page for new marshals
+--%>
+
+<%@ Page Title="New Marshals" Language="C#" MasterPageFile="~/HorizontalNav.Master" AutoEventWireup="true" CodeBehind="NewMarshals.aspx.cs" Inherits="WebApplication1.WebForm3" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="FeaturedContent" runat="server">
@@ -26,15 +33,15 @@
                 <tr>
                     <td>
                         <p>Not a Marshal? Think you might want to try it? <br /> <br />
-                        Our MMS New Marshal Schools open the door <br /> 
-                        for you to participate in all sorts of <br /> 
-                        motor racing events. If you would like to <br /> 
-                        receive more information please email <br /> 
-                        our recruiting team for more information</p>
+                        Our MMS New Marshal Schools open the door <br />
+                        for you to participate in all sorts of motor<br /> 
+                        racing events. If you would like to receive<br /> 
+                        more information please email our recruiting<br /> 
+                        team for more information.</p>
                     </td>
-                    <td style="border:black solid thin; text-align:center;">
-                        <p style="text-decoration:underline">2014 New Marshal School Dates</p>
-                        <p>BEMC May 3 & 4 <br />
+                    <td style="border:black solid; text-align:center;">
+                        <p style="text-decoration:underline; font-weight:bold;">2014 New Marshal School Dates</p>
+                        <p style="font-weight:bold">BEMC May 3 & 4 <br />
                         Vintage June 14 & 15 <br />
                         BARC July 26 & 27</p>
                     </td>

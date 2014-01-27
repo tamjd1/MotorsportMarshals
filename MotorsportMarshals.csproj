@@ -132,9 +132,7 @@
     <Content Include="Account\Register.aspx" />
     <Content Include="Account\RegisterExternalLogin.aspx" />
     <Content Include="App_Themes\CheckeredFlag\CheckeredFlag.css" />
-    <Content Include="App_Themes\CheckeredFlag\VCheckeredFlag.css" />
     <Content Include="Contact.aspx" />
-    <Content Include="Content\HNav.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\style.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
@@ -191,7 +189,8 @@
     <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
-    <Content Include="Content\VNav.css" />
+    <Content Include="Content\hNav.css" />
+    <Content Include="Content\vNav.css" />
     <Content Include="Images\130626152456-f1-marshal-horizontal-gallery.jpg" />
     <Content Include="Images\400249_379983682082511_2018004994_n.jpg" />
     <Content Include="Images\463908_260758180671729_851608479_o.jpg" />
@@ -267,11 +266,12 @@
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
+    <Content Include="Web.sitemap" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Scripts\_references.js" />
     <Content Include="Site.Mobile.Master" />
-    <Content Include="VerticalNav.Master" />
+    <Content Include="HorizontalNav.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -343,12 +343,12 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="HorizontalNav.Master.cs">
-      <DependentUpon>HorizontalNav.Master</DependentUpon>
+    <Compile Include="VerticalNav.Master.cs">
+      <DependentUpon>VerticalNav.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="HorizontalNav.Master.designer.cs">
-      <DependentUpon>HorizontalNav.Master</DependentUpon>
+    <Compile Include="VerticalNav.Master.designer.cs">
+      <DependentUpon>VerticalNav.Master</DependentUpon>
     </Compile>
     <Compile Include="Site.Mobile.Master.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
@@ -357,12 +357,12 @@
     <Compile Include="Site.Mobile.Master.designer.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
-    <Compile Include="VerticalNav.Master.cs">
-      <DependentUpon>VerticalNav.Master</DependentUpon>
+    <Compile Include="HorizontalNav.Master.cs">
+      <DependentUpon>HorizontalNav.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="VerticalNav.Master.designer.cs">
-      <DependentUpon>VerticalNav.Master</DependentUpon>
+    <Compile Include="HorizontalNav.Master.designer.cs">
+      <DependentUpon>HorizontalNav.Master</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
@@ -412,7 +412,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Account\Web.config" />
-    <Content Include="HorizontalNav.Master" />
+    <Content Include="VerticalNav.Master" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

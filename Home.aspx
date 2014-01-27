@@ -1,4 +1,11 @@
-﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/HorizontalNav.Master" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="WebApplication1._Default" %>
+﻿<%--
+Title: Home.aspx
+Date Created: 24/01/2014
+Author: Taha Amjad & Cory Hall
+Description: This is the home page for Motorsport Marshalling Services
+--%>
+
+<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/HorizontalNav.Master" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="WebApplication1._Default" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderId="MainContent" runat="server">
   
@@ -32,20 +39,36 @@
         });
     </script>
 
-    <div id="banner">
-         <asp:Image ID="SlideShow" runat="server" />
-    </div>
+    
 
     <div class="content">
+        <div id="banner" style="float:right; margin-right:20px; margin-top:40px;">
+            <table>
+                <tr>
+                    <td>
+                        <asp:Image ID="SlideShow" runat="server" />
+                    </td>
+                </tr>
+                <tr>
+                    <td style="border:black solid; text-align:center;">
+                        <p style="text-decoration:underline; font-weight:bold;">2014 New Marshal School Dates</p>
+                        <p style="font-weight:bold">BEMC May 3 & 4 <br />
+                        Vintage June 14 & 15 <br />
+                        BARC July 26 & 27</p>
+                    </td>
+                </tr>
+            </table>
+         
+        </div>
         <h1>Welcome to MMS</h1>
 
         <p>Motorsport Marshalling Services, a member club of Canadian Automobile Sport Clubs - Ontario Region (CASC), has been training 
             and organizing marshalling services for amateur and professional motorsport events since 1978. Most of our contracted events take 
-            place on the main road <br /> course at Mosport International Raceway, a 4 kilometer road-racing course located about one hour's drive 
+            place on the main road course at Mosport International Raceway, a 4 kilometer road-racing course located about one hour's drive 
             north-east of Toronto Ontario. We also organize marshals for each summer's IndyCar street race in Toronto.</p>
 
         <p>Dressed in white, equipped with communications gear, flags, and fire extinguishers, our corner marshals are positioned at strategic 
-            intervals <br /> around the race track to proactively promote a safe competition environment by:</p>
+            intervals around the race track to proactively promote a safe competition environment by:</p>
 
         <ul style="list-style-image: url('./images/flaglisticon.png');">
             <li>Inspecting the track and safety barriers for deficiencies prior to the start of daily on-track activities, and again continually during and between race sessions.</li>

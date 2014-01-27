@@ -1,0 +1,55 @@
+﻿/*
+Title: vNav.css
+Date Created: 24/01/2014
+Author: Taha Amjad
+Description: This css file contains stylings for the VerticalNav.Master page
+*/
+
+#vNav {
+    /*background-color:black;*/
+    display:inline;
+    width:25%;
+    height:100%;
+    float:left;
+    padding-top: 7%;
+    text-align:right;
+}
+
+    #vNav ul li a, #lblNextRace{
+    font-size: 1.5em;
+    text-transform: uppercase;
+    /*line-height: 50px;*/
+    color:black;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: medium;
+    letter-spacing: 1px;
+    }
+
+    #vNav ul li a:hover,
+    #vNav ul li a:focus {
+        color: yellow;
+    }
+
+    #vNav ul li a:active {
+        color:green;
+    }
+    
+
+#body {
+        /*border-right: 1px solid gray;*/
+    display:inline;
+    width:75%;
+    float:right;
+}
+
+nav {
+        text-align:center;
+            padding-top: 10px;
+}
+
+#lblNextRace {
+
+    color:white;
+    text-align:center;
+}

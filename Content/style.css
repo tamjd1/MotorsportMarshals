@@ -1,4 +1,11 @@
-﻿.content {
+﻿/*
+Title: style.css
+Date Created: 24/01/2014
+Author: Cory Hall
+Description: This css file contains styling for all the content pages
+*/
+
+.content {
     
 }
     .content p {
@@ -11,13 +18,10 @@
         margin-left:10px;
     }
 
+    .content h4 {
+        text-decoration:underline;
+    }
+
     .content ul li {
         margin-left:10px;
     }
-    /*
-    #homecontent ul {      
-        list-style-image: url('./images/flaglisticon.png');
-    }
-    */
-
-#home

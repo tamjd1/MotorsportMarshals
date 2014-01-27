@@ -1,4 +1,12 @@
-﻿header {
+﻿/*
+Title: ChecheredFlag.css
+Date Created: 24/01/2014
+Author: Taha Amjad
+Description: This css file contains stylings for the overall theme of the website
+        i.e. the CheckeredFlag theme
+*/
+
+header {
 	margin-bottom: 0px;
     background-color:black;
     	-webkit-box-shadow: 0 10px 10px -10px black;
@@ -46,7 +54,7 @@ nav {
 	color: black;
 	background: red;
     background: linear-gradient(0deg, red, black 80%, red);
-	height: 50px;
+	/*height: 50px;*/
 	-webkit-box-shadow: 0 10px 10px -10px black;
     -moz-box-shadow: 0 10px 10px -10px black;
     box-shadow: 0 10px 10px -10px black;
@@ -56,9 +64,9 @@ nav {
 }
 
 nav ul li a{
-    /*font-size: 1.5em;*/
-    /*text-transform: uppercase;*/
-    /*line-height: 50px;*/
+    /*font-size: 1.5em;
+    text-transform: uppercase;
+    line-height: 50px;*/
     /*color: #fff;*/
     /*margin: 0 20px;*/
     /*border: 0;*/
@@ -71,6 +79,10 @@ nav ul li {
 }
 
 nav ul li a {
+    font-size: 1.5em;
+    text-transform: uppercase;
+    /*line-height: 50px;*/
+    color:white;
     text-decoration: none;
     font-family: Arial, sans-serif;
     font-size: medium;
@@ -134,7 +146,7 @@ footer {
 
 body {
     background-color:whitesmoke;
-    width:100%;
+    /*width:100%;*/
     font-family: Arial, sans-serif;
 }
 
