@@ -25,3 +25,8 @@ Description: This css file contains styling for all the content pages
     .content ul li {
         margin-left:10px;
     }
+
+.seperator {
+    height:1px;
+    background: linear-gradient(90deg, whitesmoke, black 50%, whitesmoke);
+}

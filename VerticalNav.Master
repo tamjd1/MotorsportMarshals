@@ -14,6 +14,7 @@ Description: This page defines the layout for the entire website with a vertical
     <link rel="stylesheet" type="text/css" href="~/Content/hNav.css" />
     <link rel="stylesheet" type="text/css" href="~/Content/vNav.css" />
     <link rel="stylesheet" type="text/css" href="~/Content/style.css" />
+            <link rel="stylesheet" type="text/css" href="~/Content/accordion.css" />
     <title>MMS - <%: Page.Title %></title>
     <asp:PlaceHolder runat="server">     
           <%: Scripts.Render("~/bundles/modernizr") %>

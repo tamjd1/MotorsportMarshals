@@ -15,6 +15,7 @@ Description: This page defines the layout for the entire website with a horizont
         <meta charset="utf-8" />
         <link rel="stylesheet" type="text/css" href="~/Content/hNav.css" />
         <link rel="stylesheet" type="text/css" href="~/Content/style.css" />
+            <link rel="stylesheet" type="text/css" href="~/Content/accordion.css" />
     <title> MMS - <%: Page.Title %></title>
     <asp:PlaceHolder ID="PlaceHolder1" runat="server">     
           <%: Scripts.Render("~/bundles/modernizr") %>
