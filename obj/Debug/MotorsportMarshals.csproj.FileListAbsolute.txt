@@ -130,3 +130,7 @@ C:\Users\Cory\Documents\GitHub\MotorsportMarshals\bin\Microsoft.AspNet.FriendlyU
 C:\Users\Cory\Documents\GitHub\MotorsportMarshals\obj\Debug\MotorsportMarshals.csprojResolveAssemblyReference.cache
 C:\Users\Cory\Documents\GitHub\MotorsportMarshals\obj\Debug\WebApplication1.dll
 C:\Users\Cory\Documents\GitHub\MotorsportMarshals\obj\Debug\WebApplication1.pdb
+C:\Users\T\Documents\GitHub\MotorsportMarshals\bin\Org.Mentalis.Security.Cryptography.dll
+C:\Users\T\Documents\GitHub\MotorsportMarshals\bin\Mono.Math.dll
+C:\Users\T\Documents\GitHub\MotorsportMarshals\bin\Org.Mentalis.Security.Cryptography.xml
+C:\Users\T\Documents\GitHub\MotorsportMarshals\bin\Mono.Math.xml
