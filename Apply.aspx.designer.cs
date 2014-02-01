@@ -58,15 +58,6 @@ namespace WebApplication1 {
         protected global::System.Web.UI.WebControls.TextBox txtAddress1;
         
         /// <summary>
-        /// txtCity control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCity;
-        
-        /// <summary>
         /// txtAddress2 control.
         /// </summary>
         /// <remarks>
@@ -74,6 +65,15 @@ namespace WebApplication1 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtAddress2;
+        
+        /// <summary>
+        /// txtCity control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtCity;
         
         /// <summary>
         /// txtProvince control.
@@ -85,15 +85,6 @@ namespace WebApplication1 {
         protected global::System.Web.UI.WebControls.TextBox txtProvince;
         
         /// <summary>
-        /// txtPostalCode control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPostalCode;
-        
-        /// <summary>
         /// txtCountry control.
         /// </summary>
         /// <remarks>
@@ -101,6 +92,15 @@ namespace WebApplication1 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtCountry;
+        
+        /// <summary>
+        /// txtPostalCode control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtPostalCode;
         
         /// <summary>
         /// txtHomePhone control.
@@ -184,13 +184,22 @@ namespace WebApplication1 {
         protected global::System.Web.UI.WebControls.TextBox txtEmergencyLastName;
         
         /// <summary>
-        /// txtEmergencyStreetAddress control.
+        /// txtEmergencyAddress1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtEmergencyStreetAddress;
+        protected global::System.Web.UI.WebControls.TextBox txtEmergencyAddress1;
+        
+        /// <summary>
+        /// txtEmergencyAddress2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtEmergencyAddress2;
         
         /// <summary>
         /// txtEmergencyCity control.
@@ -202,15 +211,6 @@ namespace WebApplication1 {
         protected global::System.Web.UI.WebControls.TextBox txtEmergencyCity;
         
         /// <summary>
-        /// txtEmergencyStreetAddress2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtEmergencyStreetAddress2;
-        
-        /// <summary>
         /// txtEmergencyProvince control.
         /// </summary>
         /// <remarks>
@@ -218,15 +218,6 @@ namespace WebApplication1 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtEmergencyProvince;
-        
-        /// <summary>
-        /// txtEmergencyPostalCode control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtEmergencyPostalCode;
         
         /// <summary>
         /// txtEmergencyCountry control.
@@ -346,58 +337,40 @@ namespace WebApplication1 {
         protected global::System.Web.UI.WebControls.TextBox txtLogBookNumber;
         
         /// <summary>
-        /// radNo control.
+        /// rdoCardOption1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton radNo;
+        protected global::System.Web.UI.WebControls.RadioButton rdoCardOption1;
         
         /// <summary>
-        /// radLastYearsPhoto control.
+        /// rdoCardOption2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton radLastYearsPhoto;
+        protected global::System.Web.UI.WebControls.RadioButton rdoCardOption2;
         
         /// <summary>
-        /// radYes control.
+        /// rdoCardOption3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton radYes;
+        protected global::System.Web.UI.WebControls.RadioButton rdoCardOption3;
         
         /// <summary>
-        /// radNewPhotoTaken control.
+        /// rdoCardOption4 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton radNewPhotoTaken;
-        
-        /// <summary>
-        /// ddlClubs control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlClubs;
-        
-        /// <summary>
-        /// radIncludingPhoto control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton radIncludingPhoto;
+        protected global::System.Web.UI.WebControls.RadioButton rdoCardOption4;
         
         /// <summary>
         /// txtOccupation control.
@@ -409,15 +382,6 @@ namespace WebApplication1 {
         protected global::System.Web.UI.WebControls.TextBox txtOccupation;
         
         /// <summary>
-        /// radWillEmailPhoto control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton radWillEmailPhoto;
-        
-        /// <summary>
         /// txtNameForIdCard control.
         /// </summary>
         /// <remarks>
@@ -425,6 +389,42 @@ namespace WebApplication1 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtNameForIdCard;
+        
+        /// <summary>
+        /// rdoYes control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton rdoYes;
+        
+        /// <summary>
+        /// rdoNo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton rdoNo;
+        
+        /// <summary>
+        /// ddlPrimaryClub control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlPrimaryClub;
+        
+        /// <summary>
+        /// tblTermsAgreeement control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Table tblTermsAgreeement;
         
         /// <summary>
         /// txtTermsAndConditions control.
@@ -436,22 +436,22 @@ namespace WebApplication1 {
         protected global::System.Web.UI.WebControls.TextBox txtTermsAndConditions;
         
         /// <summary>
-        /// radReturning control.
+        /// rdoReturning control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton radReturning;
+        protected global::System.Web.UI.WebControls.RadioButton rdoReturning;
         
         /// <summary>
-        /// radNew control.
+        /// rdoNew control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton radNew;
+        protected global::System.Web.UI.WebControls.RadioButton rdoNew;
         
         /// <summary>
         /// chkAgree control.

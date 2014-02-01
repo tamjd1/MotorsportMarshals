@@ -30,3 +30,25 @@ Description: This css file contains styling for all the content pages
     height:1px;
     background: linear-gradient(90deg, whitesmoke, black 50%, whitesmoke);
 }
+
+.label {
+    text-align:right;
+    display: block;
+}
+
+.textBox {
+    
+    text-align:left;
+}
+
+.dropdown {
+    margin-left:20px;
+    display: block;
+    text-align:left;
+}
+
+.radioButton {
+    
+    margin-left:20px;
+    text-align:left;
+} 

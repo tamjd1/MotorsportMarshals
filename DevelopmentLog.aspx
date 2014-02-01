@@ -43,7 +43,10 @@ Description: This page records the technical details of the website as it is dev
             read and understand if we displayed them in list format. However, we felt that the standard 
             bullets were pretty dull so added a checkered flag image in place of them. <br /> <br />
 
-            Apply: The content section of this page is currently empty. <br /> <br />
+            Apply: The application form consists of multiple ASP tables containing various controls including:
+            labels, textboxes, radio buttons, drop down menus, and checkboxes. As is common with many forms,
+            required fields are denoted by a red asterisk. Otherwise, We tried to keep the design as simple
+            as possible due to it being a legal contract. <br /> <br />
 
             Forum: This menu option links to the already existing forum located on the original site. <br /> <br />
 
@@ -69,6 +72,6 @@ Description: This page records the technical details of the website as it is dev
         </p>
         <p>4:37pm 01/26/2014: Fixed an issue where content was overlapping the footer and even going beneath it
             on smaller screens. The fix involved changing a style attribute in the #body ID from height to min-height.
-        </p>
+        </p>        
     </div>
 </asp:Content>
