@@ -337,40 +337,13 @@ namespace WebApplication1 {
         protected global::System.Web.UI.WebControls.TextBox txtLogBookNumber;
         
         /// <summary>
-        /// rdoCardOption1 control.
+        /// IdCardPhoto control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton rdoCardOption1;
-        
-        /// <summary>
-        /// rdoCardOption2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton rdoCardOption2;
-        
-        /// <summary>
-        /// rdoCardOption3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton rdoCardOption3;
-        
-        /// <summary>
-        /// rdoCardOption4 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton rdoCardOption4;
+        protected global::System.Web.UI.WebControls.RadioButtonList IdCardPhoto;
         
         /// <summary>
         /// txtOccupation control.
@@ -391,31 +364,13 @@ namespace WebApplication1 {
         protected global::System.Web.UI.WebControls.TextBox txtNameForIdCard;
         
         /// <summary>
-        /// rdoYes control.
+        /// IsOtherClubMember control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton rdoYes;
-        
-        /// <summary>
-        /// rdoNo control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton rdoNo;
-        
-        /// <summary>
-        /// ddlPrimaryClub control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlPrimaryClub;
+        protected global::System.Web.UI.WebControls.RadioButtonList IsOtherClubMember;
         
         /// <summary>
         /// tblTermsAgreeement control.
@@ -436,22 +391,13 @@ namespace WebApplication1 {
         protected global::System.Web.UI.WebControls.TextBox txtTermsAndConditions;
         
         /// <summary>
-        /// rdoReturning control.
+        /// PaymentOption control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton rdoReturning;
-        
-        /// <summary>
-        /// rdoNew control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton rdoNew;
+        protected global::System.Web.UI.WebControls.RadioButtonList PaymentOption;
         
         /// <summary>
         /// chkAgree control.
@@ -470,5 +416,14 @@ namespace WebApplication1 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnSubmit;
+        
+        /// <summary>
+        /// mmsDBConnection control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource mmsDBConnection;
     }
 }
