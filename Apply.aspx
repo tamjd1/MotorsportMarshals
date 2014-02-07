@@ -345,7 +345,7 @@ Description: This page is for MMS Membership Application
                         </asp:TableCell>         
                         <asp:TableCell> 
                                               
-                            <asp:DropDownList runat="server" ID="ddlPrimaryClub" CssClass="dropdown" DataSourceID="mmsDBConnection" DataValueField="<%# Bind("PrimaryClub") %>">
+                            <asp:DropDownList runat="server" ID="ddlPrimaryClub" CssClass="dropdown">
                                 <asp:ListItem Text="MMS" Value="MMS"></asp:ListItem>
                                 <asp:ListItem Text="MCO" Value="MCO"></asp:ListItem>
                                 <asp:ListItem Text="CRCA" Value="CRCA"></asp:ListItem>
@@ -395,10 +395,10 @@ Description: This page is for MMS Membership Application
                         <div style="text-align:left; float: left; position: relative;left: -50%;">
                             <asp:Label runat="server" >Please select a payment option:<span style="color:red">*</span></asp:Label> <br /> <br />
                             <asp:RadioButtonList ID="PaymentOption" runat="server" SelectedValue='<%# Bind("PaymentOption") %>'>
-                            <asp:ListItem Value="Returning" Text="I am a returning MMS member and will send a cheque or a
+                            <asp:ListItem Value="Email" Text="I am a returning MMS member and will send a cheque or a
                                     interact email money transfer for the $10.00.
                                     This covers MMS membership and CASC licensing." />
-                            <asp:ListItem Value="New" Text="I am a new MMS member applicant enclosing a cheque or
+                            <asp:ListItem Value="Other" Text="I am a new MMS member applicant enclosing a cheque or
                                     sending a Interact email money transfer for $10.00.
                                     This fee covers MMS membership and CASC licensing" />
                             </asp:RadioButtonList>
@@ -409,7 +409,7 @@ Description: This page is for MMS Membership Application
                             <br />
                             <br />
                             <div style="text-align:center">
-                                <asp:Button ID="btnSubmit" runat="server" Text="Submit" />
+                                <asp:Button ID="btnSubmit" runat="server" Text="Submit" OnClick="btnSubmit_Click" />
                             </div>
                         </div>
                     </div>
@@ -420,5 +420,452 @@ Description: This page is for MMS Membership Application
             </asp:TableRow>
         </asp:Table>
     </div>
-    <asp:SqlDataSource ID="mmsDBConnection" runat="server" ConnectionString="<%$ ConnectionStrings:MMSConnectionString %>" SelectCommand="SELECT * FROM [tblMembers]" ConflictDetection="CompareAllValues" DeleteCommand="DELETE FROM [tblMembers] WHERE [MemberID] = @original_MemberID AND (([MemberFirst] = @original_MemberFirst) OR ([MemberFirst] IS NULL AND @original_MemberFirst IS NULL)) AND (([MemberMiddle] = @original_MemberMiddle) OR ([MemberMiddle] IS NULL AND @original_MemberMiddle IS NULL)) AND (([MemberLast] = @original_MemberLast) OR ([MemberLast] IS NULL AND @original_MemberLast IS NULL)) AND (([MemberFirstAddress] = @original_MemberFirstAddress) OR ([MemberFirstAddress] IS NULL AND @original_MemberFirstAddress IS NULL)) AND (([MemberSecondAddress] = @original_MemberSecondAddress) OR ([MemberSecondAddress] IS NULL AND @original_MemberSecondAddress IS NULL)) AND (([MemberCity] = @original_MemberCity) OR ([MemberCity] IS NULL AND @original_MemberCity IS NULL)) AND (([MemberProvince] = @original_MemberProvince) OR ([MemberProvince] IS NULL AND @original_MemberProvince IS NULL)) AND (([MemberCountry] = @original_MemberCountry) OR ([MemberCountry] IS NULL AND @original_MemberCountry IS NULL)) AND (([MemberPostal] = @original_MemberPostal) OR ([MemberPostal] IS NULL AND @original_MemberPostal IS NULL)) AND (([MemberHomePhone] = @original_MemberHomePhone) OR ([MemberHomePhone] IS NULL AND @original_MemberHomePhone IS NULL)) AND (([MemberCellPhone] = @original_MemberCellPhone) OR ([MemberCellPhone] IS NULL AND @original_MemberCellPhone IS NULL)) AND (([MemberWorkPhone] = @original_MemberWorkPhone) OR ([MemberWorkPhone] IS NULL AND @original_MemberWorkPhone IS NULL)) AND (([MemberEmail] = @original_MemberEmail) OR ([MemberEmail] IS NULL AND @original_MemberEmail IS NULL)) AND (([MemberBirthDate] = @original_MemberBirthDate) OR ([MemberBirthDate] IS NULL AND @original_MemberBirthDate IS NULL)) AND [EmergencyID] = @original_EmergencyID AND (([EmergencyFirst] = @original_EmergencyFirst) OR ([EmergencyFirst] IS NULL AND @original_EmergencyFirst IS NULL)) AND (([EmergencyMiddle] = @original_EmergencyMiddle) OR ([EmergencyMiddle] IS NULL AND @original_EmergencyMiddle IS NULL)) AND (([EmergencyLast] = @original_EmergencyLast) OR ([EmergencyLast] IS NULL AND @original_EmergencyLast IS NULL)) AND (([EmergencyFirstAddress] = @original_EmergencyFirstAddress) OR ([EmergencyFirstAddress] IS NULL AND @original_EmergencyFirstAddress IS NULL)) AND (([EmergencySecondAddress] = @original_EmergencySecondAddress) OR ([EmergencySecondAddress] IS NULL AND @original_EmergencySecondAddress IS NULL)) AND (([EmergencyCity] = @original_EmergencyCity) OR ([EmergencyCity] IS NULL AND @original_EmergencyCity IS NULL)) AND (([EmergencyProvince] = @original_EmergencyProvince) OR ([EmergencyProvince] IS NULL AND @original_EmergencyProvince IS NULL)) AND (([EmergencyCountry] = @original_EmergencyCountry) OR ([EmergencyCountry] IS NULL AND @original_EmergencyCountry IS NULL)) AND (([EmergencyHomePhone] = @original_EmergencyHomePhone) OR ([EmergencyHomePhone] IS NULL AND @original_EmergencyHomePhone IS NULL)) AND (([EmergencyCellPhone] = @original_EmergencyCellPhone) OR ([EmergencyCellPhone] IS NULL AND @original_EmergencyCellPhone IS NULL)) AND (([EmergencyWorkPhone] = @original_EmergencyWorkPhone) OR ([EmergencyWorkPhone] IS NULL AND @original_EmergencyWorkPhone IS NULL)) AND (([EmergencyRelation] = @original_EmergencyRelation) OR ([EmergencyRelation] IS NULL AND @original_EmergencyRelation IS NULL)) AND (([DrugAllergies] = @original_DrugAllergies) OR ([DrugAllergies] IS NULL AND @original_DrugAllergies IS NULL)) AND (([OtherAllergies] = @original_OtherAllergies) OR ([OtherAllergies] IS NULL AND @original_OtherAllergies IS NULL)) AND (([MedicalConditions] = @original_MedicalConditions) OR ([MedicalConditions] IS NULL AND @original_MedicalConditions IS NULL)) AND (([Medications] = @original_Medications) OR ([Medications] IS NULL AND @original_Medications IS NULL)) AND (([PhysicalLimitations] = @original_PhysicalLimitations) OR ([PhysicalLimitations] IS NULL AND @original_PhysicalLimitations IS NULL)) AND (([LogBookNumber] = @original_LogBookNumber) OR ([LogBookNumber] IS NULL AND @original_LogBookNumber IS NULL)) AND (([Occupation] = @original_Occupation) OR ([Occupation] IS NULL AND @original_Occupation IS NULL)) AND (([NameVariation] = @original_NameVariation) OR ([NameVariation] IS NULL AND @original_NameVariation IS NULL)) AND (([IsOtherClubMember] = @original_IsOtherClubMember) OR ([IsOtherClubMember] IS NULL AND @original_IsOtherClubMember IS NULL)) AND (([PrimaryClub] = @original_PrimaryClub) OR ([PrimaryClub] IS NULL AND @original_PrimaryClub IS NULL)) AND (([IdPhotoOption] = @original_IdPhotoOption) OR ([IdPhotoOption] IS NULL AND @original_IdPhotoOption IS NULL)) AND (([PaymentOption] = @original_PaymentOption) OR ([PaymentOption] IS NULL AND @original_PaymentOption IS NULL))" InsertCommand="INSERT INTO [tblMembers] ([MemberID], [MemberFirst], [MemberMiddle], [MemberLast], [MemberFirstAddress], [MemberSecondAddress], [MemberCity], [MemberProvince], [MemberCountry], [MemberPostal], [MemberHomePhone], [MemberCellPhone], [MemberWorkPhone], [MemberEmail], [MemberBirthDate], [EmergencyID], [EmergencyFirst], [EmergencyMiddle], [EmergencyLast], [EmergencyFirstAddress], [EmergencySecondAddress], [EmergencyCity], [EmergencyProvince], [EmergencyCountry], [EmergencyHomePhone], [EmergencyCellPhone], [EmergencyWorkPhone], [EmergencyRelation], [DrugAllergies], [OtherAllergies], [MedicalConditions], [Medications], [PhysicalLimitations], [LogBookNumber], [Occupation], [NameVariation], [IsOtherClubMember], [PrimaryClub], [IdPhotoOption], [PaymentOption]) VALUES (@MemberID, @MemberFirst, @MemberMiddle, @MemberLast, @MemberFirstAddress, @MemberSecondAddress, @MemberCity, @MemberProvince, @MemberCountry, @MemberPostal, @MemberHomePhone, @MemberCellPhone, @MemberWorkPhone, @MemberEmail, @MemberBirthDate, @EmergencyID, @EmergencyFirst, @EmergencyMiddle, @EmergencyLast, @EmergencyFirstAddress, @EmergencySecondAddress, @EmergencyCity, @EmergencyProvince, @EmergencyCountry, @EmergencyHomePhone, @EmergencyCellPhone, @EmergencyWorkPhone, @EmergencyRelation, @DrugAllergies, @OtherAllergies, @MedicalConditions, @Medications, @PhysicalLimitations, @LogBookNumber, @Occupation, @NameVariation, @IsOtherClubMember, @PrimaryClub, @IdPhotoOption, @PaymentOption)" OldValuesParameterFormatString="original_{0}" UpdateCommand="UPDATE [tblMembers] SET [MemberFirst] = @MemberFirst, [MemberMiddle] = @MemberMiddle, [MemberLast] = @MemberLast, [MemberFirstAddress] = @MemberFirstAddress, [MemberSecondAddress] = @MemberSecondAddress, [MemberCity] = @MemberCity, [MemberProvince] = @MemberProvince, [MemberCountry] = @MemberCountry, [MemberPostal] = @MemberPostal, [MemberHomePhone] = @MemberHomePhone, [MemberCellPhone] = @MemberCellPhone, [MemberWorkPhone] = @MemberWorkPhone, [MemberEmail] = @MemberEmail, [MemberBirthDate] = @MemberBirthDate, [EmergencyID] = @EmergencyID, [EmergencyFirst] = @EmergencyFirst, [EmergencyMiddle] = @EmergencyMiddle, [EmergencyLast] = @EmergencyLast, [EmergencyFirstAddress] = @EmergencyFirstAddress, [EmergencySecondAddress] = @EmergencySecondAddress, [EmergencyCity] = @EmergencyCity, [EmergencyProvince] = @EmergencyProvince, [EmergencyCountry] = @EmergencyCountry, [EmergencyHomePhone] = @EmergencyHomePhone, [EmergencyCellPhone] = @EmergencyCellPhone, [EmergencyWorkPhone] = @EmergencyWorkPhone, [EmergencyRelation] = @EmergencyRelation, [DrugAllergies] = @DrugAllergies, [OtherAllergies] = @OtherAllergies, [MedicalConditions] = @MedicalConditions, [Medications] = @Medications, [PhysicalLimitations] = @PhysicalLimitations, [LogBookNumber] = @LogBookNumber, [Occupation] = @Occupation, [NameVariation] = @NameVariation, [IsOtherClubMember] = @IsOtherClubMember, [PrimaryClub] = @PrimaryClub, [IdPhotoOption] = @IdPhotoOption, [PaymentOption] = @PaymentOption WHERE [MemberID] = @original_MemberID AND (([MemberFirst] = @original_MemberFirst) OR ([MemberFirst] IS NULL AND @original_MemberFirst IS NULL)) AND (([MemberMiddle] = @original_MemberMiddle) OR ([MemberMiddle] IS NULL AND @original_MemberMiddle IS NULL)) AND (([MemberLast] = @original_MemberLast) OR ([MemberLast] IS NULL AND @original_MemberLast IS NULL)) AND (([MemberFirstAddress] = @original_MemberFirstAddress) OR ([MemberFirstAddress] IS NULL AND @original_MemberFirstAddress IS NULL)) AND (([MemberSecondAddress] = @original_MemberSecondAddress) OR ([MemberSecondAddress] IS NULL AND @original_MemberSecondAddress IS NULL)) AND (([MemberCity] = @original_MemberCity) OR ([MemberCity] IS NULL AND @original_MemberCity IS NULL)) AND (([MemberProvince] = @original_MemberProvince) OR ([MemberProvince] IS NULL AND @original_MemberProvince IS NULL)) AND (([MemberCountry] = @original_MemberCountry) OR ([MemberCountry] IS NULL AND @original_MemberCountry IS NULL)) AND (([MemberPostal] = @original_MemberPostal) OR ([MemberPostal] IS NULL AND @original_MemberPostal IS NULL)) AND (([MemberHomePhone] = @original_MemberHomePhone) OR ([MemberHomePhone] IS NULL AND @original_MemberHomePhone IS NULL)) AND (([MemberCellPhone] = @original_MemberCellPhone) OR ([MemberCellPhone] IS NULL AND @original_MemberCellPhone IS NULL)) AND (([MemberWorkPhone] = @original_MemberWorkPhone) OR ([MemberWorkPhone] IS NULL AND @original_MemberWorkPhone IS NULL)) AND (([MemberEmail] = @original_MemberEmail) OR ([MemberEmail] IS NULL AND @original_MemberEmail IS NULL)) AND (([MemberBirthDate] = @original_MemberBirthDate) OR ([MemberBirthDate] IS NULL AND @original_MemberBirthDate IS NULL)) AND [EmergencyID] = @original_EmergencyID AND (([EmergencyFirst] = @original_EmergencyFirst) OR ([EmergencyFirst] IS NULL AND @original_EmergencyFirst IS NULL)) AND (([EmergencyMiddle] = @original_EmergencyMiddle) OR ([EmergencyMiddle] IS NULL AND @original_EmergencyMiddle IS NULL)) AND (([EmergencyLast] = @original_EmergencyLast) OR ([EmergencyLast] IS NULL AND @original_EmergencyLast IS NULL)) AND (([EmergencyFirstAddress] = @original_EmergencyFirstAddress) OR ([EmergencyFirstAddress] IS NULL AND @original_EmergencyFirstAddress IS NULL)) AND (([EmergencySecondAddress] = @original_EmergencySecondAddress) OR ([EmergencySecondAddress] IS NULL AND @original_EmergencySecondAddress IS NULL)) AND (([EmergencyCity] = @original_EmergencyCity) OR ([EmergencyCity] IS NULL AND @original_EmergencyCity IS NULL)) AND (([EmergencyProvince] = @original_EmergencyProvince) OR ([EmergencyProvince] IS NULL AND @original_EmergencyProvince IS NULL)) AND (([EmergencyCountry] = @original_EmergencyCountry) OR ([EmergencyCountry] IS NULL AND @original_EmergencyCountry IS NULL)) AND (([EmergencyHomePhone] = @original_EmergencyHomePhone) OR ([EmergencyHomePhone] IS NULL AND @original_EmergencyHomePhone IS NULL)) AND (([EmergencyCellPhone] = @original_EmergencyCellPhone) OR ([EmergencyCellPhone] IS NULL AND @original_EmergencyCellPhone IS NULL)) AND (([EmergencyWorkPhone] = @original_EmergencyWorkPhone) OR ([EmergencyWorkPhone] IS NULL AND @original_EmergencyWorkPhone IS NULL)) AND (([EmergencyRelation] = @original_EmergencyRelation) OR ([EmergencyRelation] IS NULL AND @original_EmergencyRelation IS NULL)) AND (([DrugAllergies] = @original_DrugAllergies) OR ([DrugAllergies] IS NULL AND @original_DrugAllergies IS NULL)) AND (([OtherAllergies] = @original_OtherAllergies) OR ([OtherAllergies] IS NULL AND @original_OtherAllergies IS NULL)) AND (([MedicalConditions] = @original_MedicalConditions) OR ([MedicalConditions] IS NULL AND @original_MedicalConditions IS NULL)) AND (([Medications] = @original_Medications) OR ([Medications] IS NULL AND @original_Medications IS NULL)) AND (([PhysicalLimitations] = @original_PhysicalLimitations) OR ([PhysicalLimitations] IS NULL AND @original_PhysicalLimitations IS NULL)) AND (([LogBookNumber] = @original_LogBookNumber) OR ([LogBookNumber] IS NULL AND @original_LogBookNumber IS NULL)) AND (([Occupation] = @original_Occupation) OR ([Occupation] IS NULL AND @original_Occupation IS NULL)) AND (([NameVariation] = @original_NameVariation) OR ([NameVariation] IS NULL AND @original_NameVariation IS NULL)) AND (([IsOtherClubMember] = @original_IsOtherClubMember) OR ([IsOtherClubMember] IS NULL AND @original_IsOtherClubMember IS NULL)) AND (([PrimaryClub] = @original_PrimaryClub) OR ([PrimaryClub] IS NULL AND @original_PrimaryClub IS NULL)) AND (([IdPhotoOption] = @original_IdPhotoOption) OR ([IdPhotoOption] IS NULL AND @original_IdPhotoOption IS NULL)) AND (([PaymentOption] = @original_PaymentOption) OR ([PaymentOption] IS NULL AND @original_PaymentOption IS NULL))"><DeleteParameters><asp:Parameter Name="original_MemberID" Type="String" /><asp:Parameter Name="original_MemberFirst" Type="String" /><asp:Parameter Name="original_MemberMiddle" Type="String" /><asp:Parameter Name="original_MemberLast" Type="String" /><asp:Parameter Name="original_MemberFirstAddress" Type="String" /><asp:Parameter Name="original_MemberSecondAddress" Type="String" /><asp:Parameter Name="original_MemberCity" Type="String" /><asp:Parameter Name="original_MemberProvince" Type="String" /><asp:Parameter Name="original_MemberCountry" Type="String" /><asp:Parameter Name="original_MemberPostal" Type="String" /><asp:Parameter Name="original_MemberHomePhone" Type="String" /><asp:Parameter Name="original_MemberCellPhone" Type="String" /><asp:Parameter Name="original_MemberWorkPhone" Type="String" /><asp:Parameter Name="original_MemberEmail" Type="String" /><asp:Parameter DbType="Date" Name="original_MemberBirthDate" /><asp:Parameter Name="original_EmergencyID" Type="String" /><asp:Parameter Name="original_EmergencyFirst" Type="String" /><asp:Parameter Name="original_EmergencyMiddle" Type="String" /><asp:Parameter Name="original_EmergencyLast" Type="String" /><asp:Parameter Name="original_EmergencyFirstAddress" Type="String" /><asp:Parameter Name="original_EmergencySecondAddress" Type="String" /><asp:Parameter Name="original_EmergencyCity" Type="String" /><asp:Parameter Name="original_EmergencyProvince" Type="String" /><asp:Parameter Name="original_EmergencyCountry" Type="String" /><asp:Parameter Name="original_EmergencyHomePhone" Type="String" /><asp:Parameter Name="original_EmergencyCellPhone" Type="String" /><asp:Parameter Name="original_EmergencyWorkPhone" Type="String" /><asp:Parameter DbType="Date" Name="original_EmergencyRelation" /><asp:Parameter Name="original_DrugAllergies" Type="String" /><asp:Parameter Name="original_OtherAllergies" Type="String" /><asp:Parameter Name="original_MedicalConditions" Type="String" /><asp:Parameter Name="original_Medications" Type="String" /><asp:Parameter Name="original_PhysicalLimitations" Type="String" /><asp:Parameter Name="original_LogBookNumber" Type="String" /><asp:Parameter Name="original_Occupation" Type="String" /><asp:Parameter Name="original_NameVariation" Type="String" /><asp:Parameter Name="original_IsOtherClubMember" Type="Boolean" /><asp:Parameter Name="original_PrimaryClub" Type="String" /><asp:Parameter Name="original_IdPhotoOption" Type="String" /><asp:Parameter Name="original_PaymentOption" Type="String" /></DeleteParameters><InsertParameters><asp:Parameter Name="MemberID" Type="String" /><asp:Parameter Name="MemberFirst" Type="String" /><asp:Parameter Name="MemberMiddle" Type="String" /><asp:Parameter Name="MemberLast" Type="String" /><asp:Parameter Name="MemberFirstAddress" Type="String" /><asp:Parameter Name="MemberSecondAddress" Type="String" /><asp:Parameter Name="MemberCity" Type="String" /><asp:Parameter Name="MemberProvince" Type="String" /><asp:Parameter Name="MemberCountry" Type="String" /><asp:Parameter Name="MemberPostal" Type="String" /><asp:Parameter Name="MemberHomePhone" Type="String" /><asp:Parameter Name="MemberCellPhone" Type="String" /><asp:Parameter Name="MemberWorkPhone" Type="String" /><asp:Parameter Name="MemberEmail" Type="String" /><asp:Parameter DbType="Date" Name="MemberBirthDate" /><asp:Parameter Name="EmergencyID" Type="String" /><asp:Parameter Name="EmergencyFirst" Type="String" /><asp:Parameter Name="EmergencyMiddle" Type="String" /><asp:Parameter Name="EmergencyLast" Type="String" /><asp:Parameter Name="EmergencyFirstAddress" Type="String" /><asp:Parameter Name="EmergencySecondAddress" Type="String" /><asp:Parameter Name="EmergencyCity" Type="String" /><asp:Parameter Name="EmergencyProvince" Type="String" /><asp:Parameter Name="EmergencyCountry" Type="String" /><asp:Parameter Name="EmergencyHomePhone" Type="String" /><asp:Parameter Name="EmergencyCellPhone" Type="String" /><asp:Parameter Name="EmergencyWorkPhone" Type="String" /><asp:Parameter DbType="Date" Name="EmergencyRelation" /><asp:Parameter Name="DrugAllergies" Type="String" /><asp:Parameter Name="OtherAllergies" Type="String" /><asp:Parameter Name="MedicalConditions" Type="String" /><asp:Parameter Name="Medications" Type="String" /><asp:Parameter Name="PhysicalLimitations" Type="String" /><asp:Parameter Name="LogBookNumber" Type="String" /><asp:Parameter Name="Occupation" Type="String" /><asp:Parameter Name="NameVariation" Type="String" /><asp:Parameter Name="IsOtherClubMember" Type="Boolean" /><asp:Parameter Name="PrimaryClub" Type="String" /><asp:Parameter Name="IdPhotoOption" Type="String" /><asp:Parameter Name="PaymentOption" Type="String" /></InsertParameters><UpdateParameters><asp:Parameter Name="MemberFirst" Type="String" /><asp:Parameter Name="MemberMiddle" Type="String" /><asp:Parameter Name="MemberLast" Type="String" /><asp:Parameter Name="MemberFirstAddress" Type="String" /><asp:Parameter Name="MemberSecondAddress" Type="String" /><asp:Parameter Name="MemberCity" Type="String" /><asp:Parameter Name="MemberProvince" Type="String" /><asp:Parameter Name="MemberCountry" Type="String" /><asp:Parameter Name="MemberPostal" Type="String" /><asp:Parameter Name="MemberHomePhone" Type="String" /><asp:Parameter Name="MemberCellPhone" Type="String" /><asp:Parameter Name="MemberWorkPhone" Type="String" /><asp:Parameter Name="MemberEmail" Type="String" /><asp:Parameter DbType="Date" Name="MemberBirthDate" /><asp:Parameter Name="EmergencyID" Type="String" /><asp:Parameter Name="EmergencyFirst" Type="String" /><asp:Parameter Name="EmergencyMiddle" Type="String" /><asp:Parameter Name="EmergencyLast" Type="String" /><asp:Parameter Name="EmergencyFirstAddress" Type="String" /><asp:Parameter Name="EmergencySecondAddress" Type="String" /><asp:Parameter Name="EmergencyCity" Type="String" /><asp:Parameter Name="EmergencyProvince" Type="String" /><asp:Parameter Name="EmergencyCountry" Type="String" /><asp:Parameter Name="EmergencyHomePhone" Type="String" /><asp:Parameter Name="EmergencyCellPhone" Type="String" /><asp:Parameter Name="EmergencyWorkPhone" Type="String" /><asp:Parameter DbType="Date" Name="EmergencyRelation" /><asp:Parameter Name="DrugAllergies" Type="String" /><asp:Parameter Name="OtherAllergies" Type="String" /><asp:Parameter Name="MedicalConditions" Type="String" /><asp:Parameter Name="Medications" Type="String" /><asp:Parameter Name="PhysicalLimitations" Type="String" /><asp:Parameter Name="LogBookNumber" Type="String" /><asp:Parameter Name="Occupation" Type="String" /><asp:Parameter Name="NameVariation" Type="String" /><asp:Parameter Name="IsOtherClubMember" Type="Boolean" /><asp:Parameter Name="PrimaryClub" Type="String" /><asp:Parameter Name="IdPhotoOption" Type="String" /><asp:Parameter Name="PaymentOption" Type="String" /><asp:Parameter Name="original_MemberID" Type="String" /><asp:Parameter Name="original_MemberFirst" Type="String" /><asp:Parameter Name="original_MemberMiddle" Type="String" /><asp:Parameter Name="original_MemberLast" Type="String" /><asp:Parameter Name="original_MemberFirstAddress" Type="String" /><asp:Parameter Name="original_MemberSecondAddress" Type="String" /><asp:Parameter Name="original_MemberCity" Type="String" /><asp:Parameter Name="original_MemberProvince" Type="String" /><asp:Parameter Name="original_MemberCountry" Type="String" /><asp:Parameter Name="original_MemberPostal" Type="String" /><asp:Parameter Name="original_MemberHomePhone" Type="String" /><asp:Parameter Name="original_MemberCellPhone" Type="String" /><asp:Parameter Name="original_MemberWorkPhone" Type="String" /><asp:Parameter Name="original_MemberEmail" Type="String" /><asp:Parameter DbType="Date" Name="original_MemberBirthDate" /><asp:Parameter Name="original_EmergencyID" Type="String" /><asp:Parameter Name="original_EmergencyFirst" Type="String" /><asp:Parameter Name="original_EmergencyMiddle" Type="String" /><asp:Parameter Name="original_EmergencyLast" Type="String" /><asp:Parameter Name="original_EmergencyFirstAddress" Type="String" /><asp:Parameter Name="original_EmergencySecondAddress" Type="String" /><asp:Parameter Name="original_EmergencyCity" Type="String" /><asp:Parameter Name="original_EmergencyProvince" Type="String" /><asp:Parameter Name="original_EmergencyCountry" Type="String" /><asp:Parameter Name="original_EmergencyHomePhone" Type="String" /><asp:Parameter Name="original_EmergencyCellPhone" Type="String" /><asp:Parameter Name="original_EmergencyWorkPhone" Type="String" /><asp:Parameter DbType="Date" Name="original_EmergencyRelation" /><asp:Parameter Name="original_DrugAllergies" Type="String" /><asp:Parameter Name="original_OtherAllergies" Type="String" /><asp:Parameter Name="original_MedicalConditions" Type="String" /><asp:Parameter Name="original_Medications" Type="String" /><asp:Parameter Name="original_PhysicalLimitations" Type="String" /><asp:Parameter Name="original_LogBookNumber" Type="String" /><asp:Parameter Name="original_Occupation" Type="String" /><asp:Parameter Name="original_NameVariation" Type="String" /><asp:Parameter Name="original_IsOtherClubMember" Type="Boolean" /><asp:Parameter Name="original_PrimaryClub" Type="String" /><asp:Parameter Name="original_IdPhotoOption" Type="String" /><asp:Parameter Name="original_PaymentOption" Type="String" /></UpdateParameters></asp:SqlDataSource>
+    <asp:SqlDataSource 
+        ID="mmsDBConnection" 
+        runat="server" 
+        ConnectionString="<%$ ConnectionStrings:MMSConnectionString %>" 
+        SelectCommand="SELECT * FROM [tblMembers]" 
+        ConflictDetection="CompareAllValues" 
+        DeleteCommand="DELETE FROM [tblMembers] 
+            WHERE [MemberID] = @original_MemberID AND (([MemberFirst] = @original_MemberFirst) 
+        OR ([MemberFirst] IS NULL AND @original_MemberFirst IS NULL)) 
+        AND (([MemberMiddle] = @original_MemberMiddle) 
+        OR ([MemberMiddle] IS NULL AND @original_MemberMiddle IS NULL)) 
+        AND (([MemberLast] = @original_MemberLast) 
+        OR ([MemberLast] IS NULL AND @original_MemberLast IS NULL)) 
+        AND (([MemberFirstAddress] = @original_MemberFirstAddress) 
+        OR ([MemberFirstAddress] IS NULL AND @original_MemberFirstAddress IS NULL)) 
+        AND (([MemberSecondAddress] = @original_MemberSecondAddress) 
+        OR ([MemberSecondAddress] IS NULL AND @original_MemberSecondAddress IS NULL)) 
+        AND (([MemberCity] = @original_MemberCity) 
+        OR ([MemberCity] IS NULL AND @original_MemberCity IS NULL)) 
+        AND (([MemberProvince] = @original_MemberProvince) 
+        OR ([MemberProvince] IS NULL AND @original_MemberProvince IS NULL)) 
+        AND (([MemberCountry] = @original_MemberCountry) 
+        OR ([MemberCountry] IS NULL AND @original_MemberCountry IS NULL)) 
+        AND (([MemberPostal] = @original_MemberPostal) 
+        OR ([MemberPostal] IS NULL AND @original_MemberPostal IS NULL)) 
+        AND (([MemberHomePhone] = @original_MemberHomePhone)
+        OR ([MemberHomePhone] IS NULL AND @original_MemberHomePhone IS NULL)) 
+        AND (([MemberCellPhone] = @original_MemberCellPhone) 
+        OR ([MemberCellPhone] IS NULL AND @original_MemberCellPhone IS NULL)) 
+        AND (([MemberWorkPhone] = @original_MemberWorkPhone) 
+        OR ([MemberWorkPhone] IS NULL AND @original_MemberWorkPhone IS NULL)) 
+        AND (([MemberEmail] = @original_MemberEmail) 
+        OR ([MemberEmail] IS NULL AND @original_MemberEmail IS NULL)) 
+        AND (([MemberBirthDate] = @original_MemberBirthDate) 
+        OR ([MemberBirthDate] IS NULL AND @original_MemberBirthDate IS NULL)) 
+        AND [EmergencyID] = @original_EmergencyID AND (([EmergencyFirst] = @original_EmergencyFirst) 
+        OR ([EmergencyFirst] IS NULL AND @original_EmergencyFirst IS NULL)) 
+        AND (([EmergencyMiddle] = @original_EmergencyMiddle) 
+        OR ([EmergencyMiddle] IS NULL AND @original_EmergencyMiddle IS NULL)) 
+        AND (([EmergencyLast] = @original_EmergencyLast) 
+        OR ([EmergencyLast] IS NULL AND @original_EmergencyLast IS NULL)) 
+        AND (([EmergencyFirstAddress] = @original_EmergencyFirstAddress) 
+        OR ([EmergencyFirstAddress] IS NULL AND @original_EmergencyFirstAddress IS NULL)) 
+        AND (([EmergencySecondAddress] = @original_EmergencySecondAddress) 
+        OR ([EmergencySecondAddress] IS NULL AND @original_EmergencySecondAddress IS NULL)) 
+        AND (([EmergencyCity] = @original_EmergencyCity) 
+        OR ([EmergencyCity] IS NULL AND @original_EmergencyCity IS NULL)) 
+        AND (([EmergencyProvince] = @original_EmergencyProvince) 
+        OR ([EmergencyProvince] IS NULL AND @original_EmergencyProvince IS NULL)) 
+        AND (([EmergencyCountry] = @original_EmergencyCountry) 
+        OR ([EmergencyCountry] IS NULL AND @original_EmergencyCountry IS NULL)) 
+        AND (([EmergencyHomePhone] = @original_EmergencyHomePhone) 
+        OR ([EmergencyHomePhone] IS NULL AND @original_EmergencyHomePhone IS NULL)) 
+        AND (([EmergencyCellPhone] = @original_EmergencyCellPhone) 
+        OR ([EmergencyCellPhone] IS NULL AND @original_EmergencyCellPhone IS NULL)) 
+        AND (([EmergencyWorkPhone] = @original_EmergencyWorkPhone) 
+        OR ([EmergencyWorkPhone] IS NULL AND @original_EmergencyWorkPhone IS NULL)) 
+        AND (([EmergencyRelation] = @original_EmergencyRelation) 
+        OR ([EmergencyRelation] IS NULL AND @original_EmergencyRelation IS NULL)) 
+        AND (([DrugAllergies] = @original_DrugAllergies) 
+        OR ([DrugAllergies] IS NULL AND @original_DrugAllergies IS NULL)) 
+        AND (([OtherAllergies] = @original_OtherAllergies) 
+        OR ([OtherAllergies] IS NULL AND @original_OtherAllergies IS NULL)) 
+        AND (([MedicalConditions] = @original_MedicalConditions) 
+        OR ([MedicalConditions] IS NULL AND @original_MedicalConditions IS NULL)) 
+        AND (([Medications] = @original_Medications) 
+        OR ([Medications] IS NULL AND @original_Medications IS NULL)) 
+        AND (([PhysicalLimitations] = @original_PhysicalLimitations) 
+        OR ([PhysicalLimitations] IS NULL AND @original_PhysicalLimitations IS NULL)) 
+        AND (([LogBookNumber] = @original_LogBookNumber) 
+        OR ([LogBookNumber] IS NULL AND @original_LogBookNumber IS NULL)) 
+        AND (([Occupation] = @original_Occupation) 
+        OR ([Occupation] IS NULL AND @original_Occupation IS NULL)) 
+        AND (([NameVariation] = @original_NameVariation) 
+        OR ([NameVariation] IS NULL AND @original_NameVariation IS NULL)) 
+        AND (([IsOtherClubMember] = @original_IsOtherClubMember) 
+        OR ([IsOtherClubMember] IS NULL AND @original_IsOtherClubMember IS NULL)) 
+        AND (([PrimaryClub] = @original_PrimaryClub) 
+        OR ([PrimaryClub] IS NULL AND @original_PrimaryClub IS NULL)) 
+        AND (([IdPhotoOption] = @original_IdPhotoOption) 
+        OR ([IdPhotoOption] IS NULL AND @original_IdPhotoOption IS NULL)) 
+        AND (([PaymentOption] = @original_PaymentOption) 
+        OR ([PaymentOption] IS NULL AND @original_PaymentOption IS NULL))" 
+        InsertCommand="INSERT INTO [tblMembers] 
+        ([MemberID], 
+        [MemberFirst], 
+        [MemberMiddle], 
+        [MemberLast], 
+        [MemberFirstAddress], 
+        [MemberSecondAddress], 
+        [MemberCity], 
+        [MemberProvince], 
+        [MemberCountry], 
+        [MemberPostal], 
+        [MemberHomePhone], 
+        [MemberCellPhone], 
+        [MemberWorkPhone], 
+        [MemberEmail], 
+        [MemberBirthDate], 
+        [EmergencyID], 
+        [EmergencyFirst], 
+        [EmergencyMiddle], 
+        [EmergencyLast], 
+        [EmergencyFirstAddress], 
+        [EmergencySecondAddress], 
+        [EmergencyCity], 
+        [EmergencyProvince], 
+        [EmergencyCountry], 
+        [EmergencyHomePhone], 
+        [EmergencyCellPhone], 
+        [EmergencyWorkPhone], 
+        [EmergencyRelation], 
+        [DrugAllergies], 
+        [OtherAllergies], 
+        [MedicalConditions], 
+        [Medications], 
+        [PhysicalLimitations], 
+        [LogBookNumber], 
+        [Occupation], 
+        [NameVariation], 
+        [IsOtherClubMember], 
+        [PrimaryClub], 
+        [IdPhotoOption], 
+        [PaymentOption]) 
+        VALUES 
+        (@MemberID, 
+        @MemberFirst, 
+        @MemberMiddle, 
+        @MemberLast, 
+        @MemberFirstAddress, 
+        @MemberSecondAddress, 
+        @MemberCity, 
+        @MemberProvince, 
+        @MemberCountry, 
+        @MemberPostal, 
+        @MemberHomePhone, 
+        @MemberCellPhone, 
+        @MemberWorkPhone, 
+        @MemberEmail, 
+        @MemberBirthDate, 
+        @EmergencyID, 
+        @EmergencyFirst, 
+        @EmergencyMiddle, 
+        @EmergencyLast, 
+        @EmergencyFirstAddress, 
+        @EmergencySecondAddress, 
+        @EmergencyCity, 
+        @EmergencyProvince, 
+        @EmergencyCountry, 
+        @EmergencyHomePhone, 
+        @EmergencyCellPhone, 
+        @EmergencyWorkPhone, 
+        @EmergencyRelation, 
+        @DrugAllergies, 
+        @OtherAllergies, 
+        @MedicalConditions, 
+        @Medications, 
+        @PhysicalLimitations,
+        @LogBookNumber, 
+        @Occupation, 
+        @NameVariation, 
+        @IsOtherClubMember, 
+        @PrimaryClub, 
+        @IdPhotoOption, 
+        @PaymentOption)" 
+        OldValuesParameterFormatString="original_{0}" 
+        UpdateCommand="UPDATE [tblMembers] 
+        SET [MemberFirst] = @MemberFirst, 
+        [MemberMiddle] = @MemberMiddle, 
+        [MemberLast] = @MemberLast, 
+        [MemberFirstAddress] = @MemberFirstAddress, 
+        [MemberSecondAddress] = @MemberSecondAddress, 
+        [MemberCity] = @MemberCity, 
+        [MemberProvince] = @MemberProvince, 
+        [MemberCountry] = @MemberCountry, 
+        [MemberPostal] = @MemberPostal, 
+        [MemberHomePhone] = @MemberHomePhone, 
+        [MemberCellPhone] = @MemberCellPhone, 
+        [MemberWorkPhone] = @MemberWorkPhone, 
+        [MemberEmail] = @MemberEmail, 
+        [MemberBirthDate] = @MemberBirthDate, 
+        [EmergencyID] = @EmergencyID, 
+        [EmergencyFirst] = @EmergencyFirst, 
+        [EmergencyMiddle] = @EmergencyMiddle, 
+        [EmergencyLast] = @EmergencyLast, 
+        [EmergencyFirstAddress] = @EmergencyFirstAddress, 
+        [EmergencySecondAddress] = @EmergencySecondAddress, 
+        [EmergencyCity] = @EmergencyCity, 
+        [EmergencyProvince] = @EmergencyProvince, 
+        [EmergencyCountry] = @EmergencyCountry, 
+        [EmergencyHomePhone] = @EmergencyHomePhone, 
+        [EmergencyCellPhone] = @EmergencyCellPhone, 
+        [EmergencyWorkPhone] = @EmergencyWorkPhone, 
+        [EmergencyRelation] = @EmergencyRelation, 
+        [DrugAllergies] = @DrugAllergies, 
+        [OtherAllergies] = @OtherAllergies, 
+        [MedicalConditions] = @MedicalConditions, 
+        [Medications] = @Medications, 
+        [PhysicalLimitations] = @PhysicalLimitations, 
+        [LogBookNumber] = @LogBookNumber, 
+        [Occupation] = @Occupation, 
+        [NameVariation] = @NameVariation, 
+        [IsOtherClubMember] = @IsOtherClubMember, 
+        [PrimaryClub] = @PrimaryClub, 
+        [IdPhotoOption] = @IdPhotoOption, 
+        [PaymentOption] = @PaymentOption 
+        WHERE [MemberID] = @original_MemberID 
+        AND (([MemberFirst] = @original_MemberFirst) 
+        OR ([MemberFirst] IS NULL AND @original_MemberFirst IS NULL)) 
+        AND (([MemberMiddle] = @original_MemberMiddle) 
+        OR ([MemberMiddle] IS NULL AND @original_MemberMiddle IS NULL)) 
+        AND (([MemberLast] = @original_MemberLast) 
+        OR ([MemberLast] IS NULL AND @original_MemberLast IS NULL)) 
+        AND (([MemberFirstAddress] = @original_MemberFirstAddress) 
+        OR ([MemberFirstAddress] IS NULL AND @original_MemberFirstAddress IS NULL)) 
+        AND (([MemberSecondAddress] = @original_MemberSecondAddress) 
+        OR ([MemberSecondAddress] IS NULL AND @original_MemberSecondAddress IS NULL)) 
+        AND (([MemberCity] = @original_MemberCity) 
+        OR ([MemberCity] IS NULL AND @original_MemberCity IS NULL)) 
+        AND (([MemberProvince] = @original_MemberProvince) 
+        OR ([MemberProvince] IS NULL AND @original_MemberProvince IS NULL)) 
+        AND (([MemberCountry] = @original_MemberCountry) 
+        OR ([MemberCountry] IS NULL AND @original_MemberCountry IS NULL)) 
+        AND (([MemberPostal] = @original_MemberPostal)
+        OR ([MemberPostal] IS NULL AND @original_MemberPostal IS NULL)) 
+        AND (([MemberHomePhone] = @original_MemberHomePhone) 
+        OR ([MemberHomePhone] IS NULL AND @original_MemberHomePhone IS NULL)) 
+        AND (([MemberCellPhone] = @original_MemberCellPhone) 
+        OR ([MemberCellPhone] IS NULL AND @original_MemberCellPhone IS NULL)) 
+        AND (([MemberWorkPhone] = @original_MemberWorkPhone) 
+        OR ([MemberWorkPhone] IS NULL AND @original_MemberWorkPhone IS NULL)) 
+        AND (([MemberEmail] = @original_MemberEmail) 
+        OR ([MemberEmail] IS NULL AND @original_MemberEmail IS NULL)) 
+        AND (([MemberBirthDate] = @original_MemberBirthDate) 
+        OR ([MemberBirthDate] IS NULL AND @original_MemberBirthDate IS NULL)) 
+        AND [EmergencyID] = @original_EmergencyID AND (([EmergencyFirst] = @original_EmergencyFirst) 
+        OR ([EmergencyFirst] IS NULL AND @original_EmergencyFirst IS NULL)) 
+        AND (([EmergencyMiddle] = @original_EmergencyMiddle) 
+        OR ([EmergencyMiddle] IS NULL AND @original_EmergencyMiddle IS NULL)) 
+        AND (([EmergencyLast] = @original_EmergencyLast) 
+        OR ([EmergencyLast] IS NULL AND @original_EmergencyLast IS NULL)) 
+        AND (([EmergencyFirstAddress] = @original_EmergencyFirstAddress) 
+        OR ([EmergencyFirstAddress] IS NULL AND @original_EmergencyFirstAddress IS NULL)) 
+        AND (([EmergencySecondAddress] = @original_EmergencySecondAddress) 
+        OR ([EmergencySecondAddress] IS NULL AND @original_EmergencySecondAddress IS NULL)) 
+        AND (([EmergencyCity] = @original_EmergencyCity) 
+        OR ([EmergencyCity] IS NULL AND @original_EmergencyCity IS NULL)) 
+        AND (([EmergencyProvince] = @original_EmergencyProvince) 
+        OR ([EmergencyProvince] IS NULL AND @original_EmergencyProvince IS NULL)) 
+        AND (([EmergencyCountry] = @original_EmergencyCountry) 
+        OR ([EmergencyCountry] IS NULL AND @original_EmergencyCountry IS NULL)) 
+        AND (([EmergencyHomePhone] = @original_EmergencyHomePhone) 
+        OR ([EmergencyHomePhone] IS NULL AND @original_EmergencyHomePhone IS NULL)) 
+        AND (([EmergencyCellPhone] = @original_EmergencyCellPhone) 
+        OR ([EmergencyCellPhone] IS NULL AND @original_EmergencyCellPhone IS NULL)) 
+        AND (([EmergencyWorkPhone] = @original_EmergencyWorkPhone) 
+        OR ([EmergencyWorkPhone] IS NULL AND @original_EmergencyWorkPhone IS NULL)) 
+        AND (([EmergencyRelation] = @original_EmergencyRelation) 
+        OR ([EmergencyRelation] IS NULL AND @original_EmergencyRelation IS NULL)) 
+        AND (([DrugAllergies] = @original_DrugAllergies)
+        OR ([DrugAllergies] IS NULL AND @original_DrugAllergies IS NULL)) 
+        AND (([OtherAllergies] = @original_OtherAllergies) 
+        OR ([OtherAllergies] IS NULL AND @original_OtherAllergies IS NULL)) 
+        AND (([MedicalConditions] = @original_MedicalConditions) 
+        OR ([MedicalConditions] IS NULL AND @original_MedicalConditions IS NULL)) 
+        AND (([Medications] = @original_Medications) 
+        OR ([Medications] IS NULL AND @original_Medications IS NULL)) 
+        AND (([PhysicalLimitations] = @original_PhysicalLimitations) 
+        OR ([PhysicalLimitations] IS NULL AND @original_PhysicalLimitations IS NULL)) 
+        AND (([LogBookNumber] = @original_LogBookNumber) 
+        OR ([LogBookNumber] IS NULL AND @original_LogBookNumber IS NULL)) 
+        AND (([Occupation] = @original_Occupation) 
+        OR ([Occupation] IS NULL AND @original_Occupation IS NULL)) 
+        AND (([NameVariation] = @original_NameVariation) 
+        OR ([NameVariation] IS NULL AND @original_NameVariation IS NULL))
+        AND (([IsOtherClubMember] = @original_IsOtherClubMember) 
+        OR ([IsOtherClubMember] IS NULL AND @original_IsOtherClubMember IS NULL)) 
+        AND (([PrimaryClub] = @original_PrimaryClub) 
+        OR ([PrimaryClub] IS NULL AND @original_PrimaryClub IS NULL)) 
+        AND (([IdPhotoOption] = @original_IdPhotoOption) 
+        OR ([IdPhotoOption] IS NULL AND @original_IdPhotoOption IS NULL)) 
+        AND (([PaymentOption] = @original_PaymentOption) 
+        OR ([PaymentOption] IS NULL AND @original_PaymentOption IS NULL))">
+        <DeleteParameters><asp:Parameter Name="original_MemberID" Type="String" />
+            <asp:Parameter Name="original_MemberFirst" Type="String" />
+            <asp:Parameter Name="original_MemberMiddle" Type="String" />
+            <asp:Parameter Name="original_MemberLast" Type="String" />
+            <asp:Parameter Name="original_MemberFirstAddress" Type="String" />
+            <asp:Parameter Name="original_MemberSecondAddress" Type="String" />
+            <asp:Parameter Name="original_MemberCity" Type="String" />
+            <asp:Parameter Name="original_MemberProvince" Type="String" />
+            <asp:Parameter Name="original_MemberCountry" Type="String" />
+            <asp:Parameter Name="original_MemberPostal" Type="String" />
+            <asp:Parameter Name="original_MemberHomePhone" Type="String" />
+            <asp:Parameter Name="original_MemberCellPhone" Type="String" />
+            <asp:Parameter Name="original_MemberWorkPhone" Type="String" />
+            <asp:Parameter Name="original_MemberEmail" Type="String" />
+            <asp:Parameter DbType="Date" Name="original_MemberBirthDate" />
+            <asp:Parameter Name="original_EmergencyID" Type="String" />
+            <asp:Parameter Name="original_EmergencyFirst" Type="String" />
+            <asp:Parameter Name="original_EmergencyMiddle" Type="String" />
+            <asp:Parameter Name="original_EmergencyLast" Type="String" />
+            <asp:Parameter Name="original_EmergencyFirstAddress" Type="String" />
+            <asp:Parameter Name="original_EmergencySecondAddress" Type="String" />
+            <asp:Parameter Name="original_EmergencyCity" Type="String" />
+            <asp:Parameter Name="original_EmergencyProvince" Type="String" />
+            <asp:Parameter Name="original_EmergencyCountry" Type="String" />
+            <asp:Parameter Name="original_EmergencyHomePhone" Type="String" />
+            <asp:Parameter Name="original_EmergencyCellPhone" Type="String" />
+            <asp:Parameter Name="original_EmergencyWorkPhone" Type="String" />
+            <asp:Parameter DbType="Date" Name="original_EmergencyRelation" />
+            <asp:Parameter Name="original_DrugAllergies" Type="String" />
+            <asp:Parameter Name="original_OtherAllergies" Type="String" />
+            <asp:Parameter Name="original_MedicalConditions" Type="String" />
+            <asp:Parameter Name="original_Medications" Type="String" />
+            <asp:Parameter Name="original_PhysicalLimitations" Type="String" />
+            <asp:Parameter Name="original_LogBookNumber" Type="String" />
+            <asp:Parameter Name="original_Occupation" Type="String" />
+            <asp:Parameter Name="original_NameVariation" Type="String" />
+            <asp:Parameter Name="original_IsOtherClubMember" Type="Boolean" />
+            <asp:Parameter Name="original_PrimaryClub" Type="String" />
+            <asp:Parameter Name="original_IdPhotoOption" Type="String" />
+            <asp:Parameter Name="original_PaymentOption" Type="String" />
+        </DeleteParameters>
+        <InsertParameters>
+            <asp:Parameter Name="MemberID" Type="String" />
+            <asp:Parameter Name="MemberFirst" Type="String" />
+            <asp:Parameter Name="MemberMiddle" Type="String" />
+            <asp:Parameter Name="MemberLast" Type="String" />
+            <asp:Parameter Name="MemberFirstAddress" Type="String" />
+            <asp:Parameter Name="MemberSecondAddress" Type="String" />
+            <asp:Parameter Name="MemberCity" Type="String" />
+            <asp:Parameter Name="MemberProvince" Type="String" />
+            <asp:Parameter Name="MemberCountry" Type="String" />
+            <asp:Parameter Name="MemberPostal" Type="String" />
+            <asp:Parameter Name="MemberHomePhone" Type="String" />
+            <asp:Parameter Name="MemberCellPhone" Type="String" />
+            <asp:Parameter Name="MemberWorkPhone" Type="String" />
+            <asp:Parameter Name="MemberEmail" Type="String" />
+            <asp:Parameter DbType="Date" Name="MemberBirthDate" />
+            <asp:Parameter Name="EmergencyID" Type="String" />
+            <asp:Parameter Name="EmergencyFirst" Type="String" />
+            <asp:Parameter Name="EmergencyMiddle" Type="String" />
+            <asp:Parameter Name="EmergencyLast" Type="String" />
+            <asp:Parameter Name="EmergencyFirstAddress" Type="String" />
+            <asp:Parameter Name="EmergencySecondAddress" Type="String" />
+            <asp:Parameter Name="EmergencyCity" Type="String" />
+            <asp:Parameter Name="EmergencyProvince" Type="String" />
+            <asp:Parameter Name="EmergencyCountry" Type="String" />
+            <asp:Parameter Name="EmergencyHomePhone" Type="String" />
+            <asp:Parameter Name="EmergencyCellPhone" Type="String" />
+            <asp:Parameter Name="EmergencyWorkPhone" Type="String" />
+            <asp:Parameter DbType="Date" Name="EmergencyRelation" />
+            <asp:Parameter Name="DrugAllergies" Type="String" />
+            <asp:Parameter Name="OtherAllergies" Type="String" />
+            <asp:Parameter Name="MedicalConditions" Type="String" />
+            <asp:Parameter Name="Medications" Type="String" />
+            <asp:Parameter Name="PhysicalLimitations" Type="String" />
+            <asp:Parameter Name="LogBookNumber" Type="String" />
+            <asp:Parameter Name="Occupation" Type="String" />
+            <asp:Parameter Name="NameVariation" Type="String" />
+            <asp:Parameter Name="IsOtherClubMember" Type="Boolean" />
+            <asp:Parameter Name="PrimaryClub" Type="String" />
+            <asp:Parameter Name="IdPhotoOption" Type="String" />
+            <asp:Parameter Name="PaymentOption" Type="String" />
+        </InsertParameters>
+        <UpdateParameters>
+            <asp:Parameter Name="MemberFirst" Type="String" />
+            <asp:Parameter Name="MemberMiddle" Type="String" />
+            <asp:Parameter Name="MemberLast" Type="String" />
+            <asp:Parameter Name="MemberFirstAddress" Type="String" />
+            <asp:Parameter Name="MemberSecondAddress" Type="String" />
+            <asp:Parameter Name="MemberCity" Type="String" />
+            <asp:Parameter Name="MemberProvince" Type="String" />
+            <asp:Parameter Name="MemberCountry" Type="String" />
+            <asp:Parameter Name="MemberPostal" Type="String" />
+            <asp:Parameter Name="MemberHomePhone" Type="String" />
+            <asp:Parameter Name="MemberCellPhone" Type="String" />
+            <asp:Parameter Name="MemberWorkPhone" Type="String" />
+            <asp:Parameter Name="MemberEmail" Type="String" />
+            <asp:Parameter DbType="Date" Name="MemberBirthDate" />
+            <asp:Parameter Name="EmergencyID" Type="String" />
+            <asp:Parameter Name="EmergencyFirst" Type="String" />
+            <asp:Parameter Name="EmergencyMiddle" Type="String" />
+            <asp:Parameter Name="EmergencyLast" Type="String" />
+            <asp:Parameter Name="EmergencyFirstAddress" Type="String" />
+            <asp:Parameter Name="EmergencySecondAddress" Type="String" />
+            <asp:Parameter Name="EmergencyCity" Type="String" />
+            <asp:Parameter Name="EmergencyProvince" Type="String" />
+            <asp:Parameter Name="EmergencyCountry" Type="String" />
+            <asp:Parameter Name="EmergencyHomePhone" Type="String" />
+            <asp:Parameter Name="EmergencyCellPhone" Type="String" />
+            <asp:Parameter Name="EmergencyWorkPhone" Type="String" />
+            <asp:Parameter DbType="Date" Name="EmergencyRelation" />
+            <asp:Parameter Name="DrugAllergies" Type="String" />
+            <asp:Parameter Name="OtherAllergies" Type="String" />
+            <asp:Parameter Name="MedicalConditions" Type="String" />
+            <asp:Parameter Name="Medications" Type="String" />
+            <asp:Parameter Name="PhysicalLimitations" Type="String" />
+            <asp:Parameter Name="LogBookNumber" Type="String" />
+            <asp:Parameter Name="Occupation" Type="String" />
+            <asp:Parameter Name="NameVariation" Type="String" />
+            <asp:Parameter Name="IsOtherClubMember" Type="Boolean" />
+            <asp:Parameter Name="PrimaryClub" Type="String" />
+            <asp:Parameter Name="IdPhotoOption" Type="String" />
+            <asp:Parameter Name="PaymentOption" Type="String" />
+            <asp:Parameter Name="original_MemberID" Type="String" />
+            <asp:Parameter Name="original_MemberFirst" Type="String" />
+            <asp:Parameter Name="original_MemberMiddle" Type="String" />
+            <asp:Parameter Name="original_MemberLast" Type="String" />
+            <asp:Parameter Name="original_MemberFirstAddress" Type="String" />
+            <asp:Parameter Name="original_MemberSecondAddress" Type="String" />
+            <asp:Parameter Name="original_MemberCity" Type="String" />
+            <asp:Parameter Name="original_MemberProvince" Type="String" />
+            <asp:Parameter Name="original_MemberCountry" Type="String" />
+            <asp:Parameter Name="original_MemberPostal" Type="String" />
+            <asp:Parameter Name="original_MemberHomePhone" Type="String" />
+            <asp:Parameter Name="original_MemberCellPhone" Type="String" />
+            <asp:Parameter Name="original_MemberWorkPhone" Type="String" />
+            <asp:Parameter Name="original_MemberEmail" Type="String" />
+            <asp:Parameter DbType="Date" Name="original_MemberBirthDate" />
+            <asp:Parameter Name="original_EmergencyID" Type="String" />
+            <asp:Parameter Name="original_EmergencyFirst" Type="String" />
+            <asp:Parameter Name="original_EmergencyMiddle" Type="String" />
+            <asp:Parameter Name="original_EmergencyLast" Type="String" />
+            <asp:Parameter Name="original_EmergencyFirstAddress" Type="String" />
+            <asp:Parameter Name="original_EmergencySecondAddress" Type="String" />
+            <asp:Parameter Name="original_EmergencyCity" Type="String" />
+            <asp:Parameter Name="original_EmergencyProvince" Type="String" />
+            <asp:Parameter Name="original_EmergencyCountry" Type="String" />
+            <asp:Parameter Name="original_EmergencyHomePhone" Type="String" />
+            <asp:Parameter Name="original_EmergencyCellPhone" Type="String" />
+            <asp:Parameter Name="original_EmergencyWorkPhone" Type="String" />
+            <asp:Parameter DbType="Date" Name="original_EmergencyRelation" />
+            <asp:Parameter Name="original_DrugAllergies" Type="String" />
+            <asp:Parameter Name="original_OtherAllergies" Type="String" />
+            <asp:Parameter Name="original_MedicalConditions" Type="String" />
+            <asp:Parameter Name="original_Medications" Type="String" />
+            <asp:Parameter Name="original_PhysicalLimitations" Type="String" />
+            <asp:Parameter Name="original_LogBookNumber" Type="String" />
+            <asp:Parameter Name="original_Occupation" Type="String" />
+            <asp:Parameter Name="original_NameVariation" Type="String" />
+            <asp:Parameter Name="original_IsOtherClubMember" Type="Boolean" />
+            <asp:Parameter Name="original_PrimaryClub" Type="String" />
+            <asp:Parameter Name="original_IdPhotoOption" Type="String" />
+            <asp:Parameter Name="original_PaymentOption" Type="String" />
+        </UpdateParameters>
+    </asp:SqlDataSource>
 </asp:Content>
