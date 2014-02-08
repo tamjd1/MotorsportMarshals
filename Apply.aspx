@@ -416,18 +416,14 @@ Description: This page is for MMS Membership Application
                     <br />
                     <br />
                     <br />
-                </asp:TableCell>
-            </asp:TableRow>
-        </asp:Table>
-    </div>
-    <asp:SqlDataSource 
+                </asp:TableCell></asp:TableRow></asp:Table></div><asp:SqlDataSource 
         ID="mmsDBConnection" 
         runat="server" 
         ConnectionString="<%$ ConnectionStrings:MMSConnectionString %>" 
         SelectCommand="SELECT * FROM [tblMembers]" 
         ConflictDetection="CompareAllValues" 
         DeleteCommand="DELETE FROM [tblMembers] 
-            WHERE [MemberID] = @original_MemberID AND (([MemberFirst] = @original_MemberFirst) 
+            WHERE (([MemberFirst] = @original_MemberFirst) 
         OR ([MemberFirst] IS NULL AND @original_MemberFirst IS NULL)) 
         AND (([MemberMiddle] = @original_MemberMiddle) 
         OR ([MemberMiddle] IS NULL AND @original_MemberMiddle IS NULL)) 
@@ -455,7 +451,7 @@ Description: This page is for MMS Membership Application
         OR ([MemberEmail] IS NULL AND @original_MemberEmail IS NULL)) 
         AND (([MemberBirthDate] = @original_MemberBirthDate) 
         OR ([MemberBirthDate] IS NULL AND @original_MemberBirthDate IS NULL)) 
-        AND [EmergencyID] = @original_EmergencyID AND (([EmergencyFirst] = @original_EmergencyFirst) 
+        AND (([EmergencyFirst] = @original_EmergencyFirst) 
         OR ([EmergencyFirst] IS NULL AND @original_EmergencyFirst IS NULL)) 
         AND (([EmergencyMiddle] = @original_EmergencyMiddle) 
         OR ([EmergencyMiddle] IS NULL AND @original_EmergencyMiddle IS NULL)) 
@@ -504,8 +500,7 @@ Description: This page is for MMS Membership Application
         AND (([PaymentOption] = @original_PaymentOption) 
         OR ([PaymentOption] IS NULL AND @original_PaymentOption IS NULL))" 
         InsertCommand="INSERT INTO [tblMembers] 
-        ([MemberID], 
-        [MemberFirst], 
+        ([MemberFirst], 
         [MemberMiddle], 
         [MemberLast], 
         [MemberFirstAddress], 
@@ -518,8 +513,7 @@ Description: This page is for MMS Membership Application
         [MemberCellPhone], 
         [MemberWorkPhone], 
         [MemberEmail], 
-        [MemberBirthDate], 
-        [EmergencyID], 
+        [MemberBirthDate],  
         [EmergencyFirst], 
         [EmergencyMiddle], 
         [EmergencyLast], 
@@ -545,8 +539,7 @@ Description: This page is for MMS Membership Application
         [IdPhotoOption], 
         [PaymentOption]) 
         VALUES 
-        (@MemberID, 
-        @MemberFirst, 
+        (@MemberFirst, 
         @MemberMiddle, 
         @MemberLast, 
         @MemberFirstAddress, 
@@ -560,7 +553,6 @@ Description: This page is for MMS Membership Application
         @MemberWorkPhone, 
         @MemberEmail, 
         @MemberBirthDate, 
-        @EmergencyID, 
         @EmergencyFirst, 
         @EmergencyMiddle, 
         @EmergencyLast, 
@@ -601,7 +593,6 @@ Description: This page is for MMS Membership Application
         [MemberWorkPhone] = @MemberWorkPhone, 
         [MemberEmail] = @MemberEmail, 
         [MemberBirthDate] = @MemberBirthDate, 
-        [EmergencyID] = @EmergencyID, 
         [EmergencyFirst] = @EmergencyFirst, 
         [EmergencyMiddle] = @EmergencyMiddle, 
         [EmergencyLast] = @EmergencyLast, 
@@ -626,8 +617,7 @@ Description: This page is for MMS Membership Application
         [PrimaryClub] = @PrimaryClub, 
         [IdPhotoOption] = @IdPhotoOption, 
         [PaymentOption] = @PaymentOption 
-        WHERE [MemberID] = @original_MemberID 
-        AND (([MemberFirst] = @original_MemberFirst) 
+        WHERE (([MemberFirst] = @original_MemberFirst) 
         OR ([MemberFirst] IS NULL AND @original_MemberFirst IS NULL)) 
         AND (([MemberMiddle] = @original_MemberMiddle) 
         OR ([MemberMiddle] IS NULL AND @original_MemberMiddle IS NULL)) 
@@ -655,7 +645,7 @@ Description: This page is for MMS Membership Application
         OR ([MemberEmail] IS NULL AND @original_MemberEmail IS NULL)) 
         AND (([MemberBirthDate] = @original_MemberBirthDate) 
         OR ([MemberBirthDate] IS NULL AND @original_MemberBirthDate IS NULL)) 
-        AND [EmergencyID] = @original_EmergencyID AND (([EmergencyFirst] = @original_EmergencyFirst) 
+        AND (([EmergencyFirst] = @original_EmergencyFirst) 
         OR ([EmergencyFirst] IS NULL AND @original_EmergencyFirst IS NULL)) 
         AND (([EmergencyMiddle] = @original_EmergencyMiddle) 
         OR ([EmergencyMiddle] IS NULL AND @original_EmergencyMiddle IS NULL)) 
@@ -703,7 +693,7 @@ Description: This page is for MMS Membership Application
         OR ([IdPhotoOption] IS NULL AND @original_IdPhotoOption IS NULL)) 
         AND (([PaymentOption] = @original_PaymentOption) 
         OR ([PaymentOption] IS NULL AND @original_PaymentOption IS NULL))">
-        <DeleteParameters><asp:Parameter Name="original_MemberID" Type="String" />
+        <DeleteParameters>
             <asp:Parameter Name="original_MemberFirst" Type="String" />
             <asp:Parameter Name="original_MemberMiddle" Type="String" />
             <asp:Parameter Name="original_MemberLast" Type="String" />
@@ -718,7 +708,6 @@ Description: This page is for MMS Membership Application
             <asp:Parameter Name="original_MemberWorkPhone" Type="String" />
             <asp:Parameter Name="original_MemberEmail" Type="String" />
             <asp:Parameter DbType="Date" Name="original_MemberBirthDate" />
-            <asp:Parameter Name="original_EmergencyID" Type="String" />
             <asp:Parameter Name="original_EmergencyFirst" Type="String" />
             <asp:Parameter Name="original_EmergencyMiddle" Type="String" />
             <asp:Parameter Name="original_EmergencyLast" Type="String" />
@@ -730,7 +719,7 @@ Description: This page is for MMS Membership Application
             <asp:Parameter Name="original_EmergencyHomePhone" Type="String" />
             <asp:Parameter Name="original_EmergencyCellPhone" Type="String" />
             <asp:Parameter Name="original_EmergencyWorkPhone" Type="String" />
-            <asp:Parameter DbType="Date" Name="original_EmergencyRelation" />
+            <asp:Parameter Name="original_EmergencyRelation" Type="String" />
             <asp:Parameter Name="original_DrugAllergies" Type="String" />
             <asp:Parameter Name="original_OtherAllergies" Type="String" />
             <asp:Parameter Name="original_MedicalConditions" Type="String" />
@@ -745,7 +734,6 @@ Description: This page is for MMS Membership Application
             <asp:Parameter Name="original_PaymentOption" Type="String" />
         </DeleteParameters>
         <InsertParameters>
-            <asp:Parameter Name="MemberID" Type="String" />
             <asp:Parameter Name="MemberFirst" Type="String" />
             <asp:Parameter Name="MemberMiddle" Type="String" />
             <asp:Parameter Name="MemberLast" Type="String" />
@@ -760,7 +748,6 @@ Description: This page is for MMS Membership Application
             <asp:Parameter Name="MemberWorkPhone" Type="String" />
             <asp:Parameter Name="MemberEmail" Type="String" />
             <asp:Parameter DbType="Date" Name="MemberBirthDate" />
-            <asp:Parameter Name="EmergencyID" Type="String" />
             <asp:Parameter Name="EmergencyFirst" Type="String" />
             <asp:Parameter Name="EmergencyMiddle" Type="String" />
             <asp:Parameter Name="EmergencyLast" Type="String" />
@@ -772,7 +759,7 @@ Description: This page is for MMS Membership Application
             <asp:Parameter Name="EmergencyHomePhone" Type="String" />
             <asp:Parameter Name="EmergencyCellPhone" Type="String" />
             <asp:Parameter Name="EmergencyWorkPhone" Type="String" />
-            <asp:Parameter DbType="Date" Name="EmergencyRelation" />
+            <asp:Parameter Name="EmergencyRelation" Type="String" />
             <asp:Parameter Name="DrugAllergies" Type="String" />
             <asp:Parameter Name="OtherAllergies" Type="String" />
             <asp:Parameter Name="MedicalConditions" Type="String" />
@@ -801,7 +788,6 @@ Description: This page is for MMS Membership Application
             <asp:Parameter Name="MemberWorkPhone" Type="String" />
             <asp:Parameter Name="MemberEmail" Type="String" />
             <asp:Parameter DbType="Date" Name="MemberBirthDate" />
-            <asp:Parameter Name="EmergencyID" Type="String" />
             <asp:Parameter Name="EmergencyFirst" Type="String" />
             <asp:Parameter Name="EmergencyMiddle" Type="String" />
             <asp:Parameter Name="EmergencyLast" Type="String" />
@@ -813,7 +799,7 @@ Description: This page is for MMS Membership Application
             <asp:Parameter Name="EmergencyHomePhone" Type="String" />
             <asp:Parameter Name="EmergencyCellPhone" Type="String" />
             <asp:Parameter Name="EmergencyWorkPhone" Type="String" />
-            <asp:Parameter DbType="Date" Name="EmergencyRelation" />
+            <asp:Parameter Name="EmergencyRelation" Type="String" />
             <asp:Parameter Name="DrugAllergies" Type="String" />
             <asp:Parameter Name="OtherAllergies" Type="String" />
             <asp:Parameter Name="MedicalConditions" Type="String" />
@@ -826,7 +812,6 @@ Description: This page is for MMS Membership Application
             <asp:Parameter Name="PrimaryClub" Type="String" />
             <asp:Parameter Name="IdPhotoOption" Type="String" />
             <asp:Parameter Name="PaymentOption" Type="String" />
-            <asp:Parameter Name="original_MemberID" Type="String" />
             <asp:Parameter Name="original_MemberFirst" Type="String" />
             <asp:Parameter Name="original_MemberMiddle" Type="String" />
             <asp:Parameter Name="original_MemberLast" Type="String" />
@@ -841,7 +826,6 @@ Description: This page is for MMS Membership Application
             <asp:Parameter Name="original_MemberWorkPhone" Type="String" />
             <asp:Parameter Name="original_MemberEmail" Type="String" />
             <asp:Parameter DbType="Date" Name="original_MemberBirthDate" />
-            <asp:Parameter Name="original_EmergencyID" Type="String" />
             <asp:Parameter Name="original_EmergencyFirst" Type="String" />
             <asp:Parameter Name="original_EmergencyMiddle" Type="String" />
             <asp:Parameter Name="original_EmergencyLast" Type="String" />
@@ -853,7 +837,7 @@ Description: This page is for MMS Membership Application
             <asp:Parameter Name="original_EmergencyHomePhone" Type="String" />
             <asp:Parameter Name="original_EmergencyCellPhone" Type="String" />
             <asp:Parameter Name="original_EmergencyWorkPhone" Type="String" />
-            <asp:Parameter DbType="Date" Name="original_EmergencyRelation" />
+            <asp:Parameter Name="original_EmergencyRelation" Type="String"/>
             <asp:Parameter Name="original_DrugAllergies" Type="String" />
             <asp:Parameter Name="original_OtherAllergies" Type="String" />
             <asp:Parameter Name="original_MedicalConditions" Type="String" />

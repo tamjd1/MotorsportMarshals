@@ -138,3 +138,7 @@ C:\Users\Cory\Documents\GitHub\MotorsportMarshals\bin\Org.Mentalis.Security.Cryp
 C:\Users\Cory\Documents\GitHub\MotorsportMarshals\bin\Mono.Math.dll
 C:\Users\Cory\Documents\GitHub\MotorsportMarshals\bin\Org.Mentalis.Security.Cryptography.xml
 C:\Users\Cory\Documents\GitHub\MotorsportMarshals\bin\Mono.Math.xml
+C:\Users\Chris\Documents\GitHub\MotorsportMarshals\bin\Org.Mentalis.Security.Cryptography.dll
+C:\Users\Chris\Documents\GitHub\MotorsportMarshals\bin\Mono.Math.dll
+C:\Users\Chris\Documents\GitHub\MotorsportMarshals\bin\Org.Mentalis.Security.Cryptography.xml
+C:\Users\Chris\Documents\GitHub\MotorsportMarshals\bin\Mono.Math.xml
